@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="ITEM_TYPE" />
+    </Key>
+    <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="COLUMN1" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="PHONENUMBER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE_TYPE">
+    <Key>
+      <PropertyRef Name="EMP_TYPE" />
+    </Key>
+    <Property Name="EMP_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="SALARY" Type="number" Precision="38" Scale="0" />
+    <Property Name="BONUS" Type="number" Precision="38" Scale="0" />
+    <Property Name="EMP_LEVEL" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HELP">
+    <Key>
+      <PropertyRef Name="TOPIC" />
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="TOPIC" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="SEQ" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="INFO" Type="varchar2" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="HISTORY">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CHECK_IN_TIME" Type="date" />
+    <Property Name="CHECK_OUT_TIME" Type="date" />
+    <Property Name="ROOM_ID" Type="number" Precision="38" Scale="0" />
+    <Property Name="PAY" Type="float" Precision="126" Scale="0" />
+  </EntityType>
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="TYPE" />
+    </Key>
+    <Property Name="TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PRICE" Type="float" Precision="126" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM">
+    <Key>
+      <PropertyRef Name="ROOM_ID" />
+    </Key>
+    <Property Name="ROOM_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ROOM_TYPE" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ROOM_CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUS_ID" />
+    </Key>
+    <Property Name="CUS_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="REPUTATION" Type="varchar2" MaxLength="20" />
+    <Property Name="TEL_NUMBER" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CHECK_IN_TIME" Type="date" />
+    <Property Name="CHECK_OUT_TIME" Type="date" />
+    <Property Name="RESERVE_TIME" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="20" />
+    <Property Name="PRE_PAY" Type="float" Precision="126" Scale="0" />
+    <Property Name="COLUMN1" Type="float" Precision="126" Scale="0" />
+    <Property Name="PRE_ORDER_ID" Type="number" Precision="38" Scale="0" />
+    <Property Name="CUS_ID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_RESERVE">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+      <PropertyRef Name="PRE_DATE" />
+    </Key>
+    <Property Name="ORDER_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRE_DATE" Type="date" Nullable="false" />
+    <Property Name="ROOM_ID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_SERVICE">
+    <Key>
+      <PropertyRef Name="ROOM_ID" />
+      <PropertyRef Name="SER_DATE" />
+      <PropertyRef Name="SERVICE_ID" />
+      <PropertyRef Name="TIME" />
+    </Key>
+    <Property Name="ROOM_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SER_DATE" Type="date" Nullable="false" />
+    <Property Name="SERVICE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TIME" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="EMP_ID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_TYPE">
+    <Key>
+      <PropertyRef Name="ROOM_TYPE" />
+    </Key>
+    <Property Name="ROOM_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PRICE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“SYSTEM.ROOM_USED”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ROOM_USED">
+    <Key>
+      <PropertyRef Name="ITEM_TYPE" />
+      <PropertyRef Name="ORDER_ID" />
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="ORDER_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NUM" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERVICE">
+    <Key>
+      <PropertyRef Name="SERVICE_ID" />
+    </Key>
+    <Property Name="SERVICE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="HotelModelStoreContainer">
+    <EntitySet Name="BILL" EntityType="Self.BILL" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE_TYPE" EntityType="Self.EMPLOYEE_TYPE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HELP" EntityType="Self.HELP" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HISTORY" EntityType="Self.HISTORY" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ITEM" EntityType="Self.ITEM" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM" EntityType="Self.ROOM" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM_CUSTOMER" EntityType="Self.ROOM_CUSTOMER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM_ORDER" EntityType="Self.ROOM_ORDER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM_RESERVE" EntityType="Self.ROOM_RESERVE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM_SERVICE" EntityType="Self.ROOM_SERVICE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM_TYPE" EntityType="Self.ROOM_TYPE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="SERVICE" EntityType="Self.SERVICE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="ROOM_USED" EntityType="Self.ROOM_USED" store:Type="Tables" store:Schema="SYSTEM">
+      <DefiningQuery>SELECT 
+"ROOM_USED"."ITEM_TYPE" AS "ITEM_TYPE", 
+"ROOM_USED"."ORDER_ID" AS "ORDER_ID", 
+"ROOM_USED"."NUM" AS "NUM"
+FROM "SYSTEM"."ROOM_USED" "ROOM_USED"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

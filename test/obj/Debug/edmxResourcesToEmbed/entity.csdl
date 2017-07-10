@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="ITEM_TYPE" />
+    </Key>
+    <Property Name="ITEM_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COLUMN1" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PHONENUMBER" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE_TYPE">
+    <Key>
+      <PropertyRef Name="EMP_TYPE" />
+    </Key>
+    <Property Name="EMP_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SALARY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="BONUS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="EMP_LEVEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HELP">
+    <Key>
+      <PropertyRef Name="TOPIC" />
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SEQ" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="INFO" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HISTORY">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CHECK_IN_TIME" Type="DateTime" />
+    <Property Name="CHECK_OUT_TIME" Type="DateTime" />
+    <Property Name="ROOM_ID" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PAY" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="TYPE" />
+    </Key>
+    <Property Name="TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRICE" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM">
+    <Key>
+      <PropertyRef Name="ROOM_ID" />
+    </Key>
+    <Property Name="ROOM_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ROOM_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ROOM_CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUS_ID" />
+    </Key>
+    <Property Name="CUS_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REPUTATION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TEL_NUMBER" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CHECK_IN_TIME" Type="DateTime" />
+    <Property Name="CHECK_OUT_TIME" Type="DateTime" />
+    <Property Name="RESERVE_TIME" Type="DateTime" />
+    <Property Name="STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_PAY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="COLUMN1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PRE_ORDER_ID" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CUS_ID" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_RESERVE">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+      <PropertyRef Name="PRE_DATE" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRE_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="ROOM_ID" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_SERVICE">
+    <Key>
+      <PropertyRef Name="ROOM_ID" />
+      <PropertyRef Name="SER_DATE" />
+      <PropertyRef Name="SERVICE_ID" />
+      <PropertyRef Name="TIME" />
+    </Key>
+    <Property Name="ROOM_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SER_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="SERVICE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TIME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMP_ID" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="ROOM_TYPE">
+    <Key>
+      <PropertyRef Name="ROOM_TYPE1" />
+    </Key>
+    <Property Name="ROOM_TYPE1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRICE" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="SERVICE">
+    <Key>
+      <PropertyRef Name="SERVICE_ID" />
+    </Key>
+    <Property Name="SERVICE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ROOM_USED">
+    <Key>
+      <PropertyRef Name="ITEM_TYPE" />
+      <PropertyRef Name="ORDER_ID" />
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="ITEM_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ORDER_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NUM" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BILL" EntityType="Self.BILL" />
+    <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" />
+    <EntitySet Name="EMPLOYEE_TYPE" EntityType="Self.EMPLOYEE_TYPE" />
+    <EntitySet Name="HELP" EntityType="Self.HELP" />
+    <EntitySet Name="HISTORY" EntityType="Self.HISTORY" />
+    <EntitySet Name="ITEM" EntityType="Self.ITEM" />
+    <EntitySet Name="ROOM" EntityType="Self.ROOM" />
+    <EntitySet Name="ROOM_CUSTOMER" EntityType="Self.ROOM_CUSTOMER" />
+    <EntitySet Name="ROOM_ORDER" EntityType="Self.ROOM_ORDER" />
+    <EntitySet Name="ROOM_RESERVE" EntityType="Self.ROOM_RESERVE" />
+    <EntitySet Name="ROOM_SERVICE" EntityType="Self.ROOM_SERVICE" />
+    <EntitySet Name="ROOM_TYPE" EntityType="Self.ROOM_TYPE" />
+    <EntitySet Name="SERVICE" EntityType="Self.SERVICE" />
+    <EntitySet Name="ROOM_USED" EntityType="Self.ROOM_USED" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="BILL">
+      <EntityTypeMapping TypeName="HotelModel.BILL">
+        <MappingFragment StoreEntitySet="BILL">
+          <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
+          <ScalarProperty Name="COLUMN1" ColumnName="COLUMN1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEE">
+      <EntityTypeMapping TypeName="HotelModel.EMPLOYEE">
+        <MappingFragment StoreEntitySet="EMPLOYEE">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PHONENUMBER" ColumnName="PHONENUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEE_TYPE">
+      <EntityTypeMapping TypeName="HotelModel.EMPLOYEE_TYPE">
+        <MappingFragment StoreEntitySet="EMPLOYEE_TYPE">
+          <ScalarProperty Name="EMP_TYPE" ColumnName="EMP_TYPE" />
+          <ScalarProperty Name="SALARY" ColumnName="SALARY" />
+          <ScalarProperty Name="BONUS" ColumnName="BONUS" />
+          <ScalarProperty Name="EMP_LEVEL" ColumnName="EMP_LEVEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HELP">
+      <EntityTypeMapping TypeName="HotelModel.HELP">
+        <MappingFragment StoreEntitySet="HELP">
+          <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="INFO" ColumnName="INFO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORY">
+      <EntityTypeMapping TypeName="HotelModel.HISTORY">
+        <MappingFragment StoreEntitySet="HISTORY">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="CHECK_IN_TIME" ColumnName="CHECK_IN_TIME" />
+          <ScalarProperty Name="CHECK_OUT_TIME" ColumnName="CHECK_OUT_TIME" />
+          <ScalarProperty Name="ROOM_ID" ColumnName="ROOM_ID" />
+          <ScalarProperty Name="PAY" ColumnName="PAY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM">
+      <EntityTypeMapping TypeName="HotelModel.ITEM">
+        <MappingFragment StoreEntitySet="ITEM">
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM">
+      <EntityTypeMapping TypeName="HotelModel.ROOM">
+        <MappingFragment StoreEntitySet="ROOM">
+          <ScalarProperty Name="ROOM_ID" ColumnName="ROOM_ID" />
+          <ScalarProperty Name="ROOM_TYPE" ColumnName="ROOM_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM_CUSTOMER">
+      <EntityTypeMapping TypeName="HotelModel.ROOM_CUSTOMER">
+        <MappingFragment StoreEntitySet="ROOM_CUSTOMER">
+          <ScalarProperty Name="CUS_ID" ColumnName="CUS_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="REPUTATION" ColumnName="REPUTATION" />
+          <ScalarProperty Name="TEL_NUMBER" ColumnName="TEL_NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM_ORDER">
+      <EntityTypeMapping TypeName="HotelModel.ROOM_ORDER">
+        <MappingFragment StoreEntitySet="ROOM_ORDER">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="CHECK_IN_TIME" ColumnName="CHECK_IN_TIME" />
+          <ScalarProperty Name="CHECK_OUT_TIME" ColumnName="CHECK_OUT_TIME" />
+          <ScalarProperty Name="RESERVE_TIME" ColumnName="RESERVE_TIME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PRE_PAY" ColumnName="PRE_PAY" />
+          <ScalarProperty Name="COLUMN1" ColumnName="COLUMN1" />
+          <ScalarProperty Name="PRE_ORDER_ID" ColumnName="PRE_ORDER_ID" />
+          <ScalarProperty Name="CUS_ID" ColumnName="CUS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM_RESERVE">
+      <EntityTypeMapping TypeName="HotelModel.ROOM_RESERVE">
+        <MappingFragment StoreEntitySet="ROOM_RESERVE">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="PRE_DATE" ColumnName="PRE_DATE" />
+          <ScalarProperty Name="ROOM_ID" ColumnName="ROOM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM_SERVICE">
+      <EntityTypeMapping TypeName="HotelModel.ROOM_SERVICE">
+        <MappingFragment StoreEntitySet="ROOM_SERVICE">
+          <ScalarProperty Name="ROOM_ID" ColumnName="ROOM_ID" />
+          <ScalarProperty Name="SER_DATE" ColumnName="SER_DATE" />
+          <ScalarProperty Name="SERVICE_ID" ColumnName="SERVICE_ID" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM_TYPE">
+      <EntityTypeMapping TypeName="HotelModel.ROOM_TYPE">
+        <MappingFragment StoreEntitySet="ROOM_TYPE">
+          <ScalarProperty Name="ROOM_TYPE1" ColumnName="ROOM_TYPE" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICE">
+      <EntityTypeMapping TypeName="HotelModel.SERVICE">
+        <MappingFragment StoreEntitySet="SERVICE">
+          <ScalarProperty Name="SERVICE_ID" ColumnName="SERVICE_ID" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOM_USED">
+      <EntityTypeMapping TypeName="HotelModel.ROOM_USED">
+        <MappingFragment StoreEntitySet="ROOM_USED">
+          <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
