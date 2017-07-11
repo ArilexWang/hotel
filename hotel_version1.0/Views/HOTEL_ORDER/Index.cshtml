@@ -9,6 +9,14 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm("Index", "HOTEL_CUSTOMER", FormMethod.Post))
+{
+    <div class="searchBlock">
+        @Html.TextBox("searchString")
+        <input type="submit" value="搜索" />
+    </div>
+}
 <table class="table-1">
     <tr>
         <th>
