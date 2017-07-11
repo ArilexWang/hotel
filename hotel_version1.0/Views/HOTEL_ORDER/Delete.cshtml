@@ -1,0 +1,88 @@
+﻿@model hotel_version1._0.HOTEL_ORDER
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>HOTEL_ORDER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CHECK_IN_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_IN_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHECK_OUT_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_OUT_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RESERVE_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RESERVE_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRE_ORDER_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRE_ORDER_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOTEL_BILL.ORDER_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_BILL.ORDER_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOTEL_CUSTOMER.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_CUSTOMER.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOTEL_ROOM.ROOM_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_ROOM.ROOM_TYPE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

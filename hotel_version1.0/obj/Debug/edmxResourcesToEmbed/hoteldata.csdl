@@ -34,7 +34,7 @@
     <Key>
       <PropertyRef Name="EMP_ID" />
     </Key>
-    <Property Name="EMP_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EMP_ID" Type="String" Nullable="false" />
     <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="PHONENUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="EMP_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />

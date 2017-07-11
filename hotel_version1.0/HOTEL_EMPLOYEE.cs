@@ -14,7 +14,7 @@ namespace hotel_version1._0
     
     public partial class HOTEL_EMPLOYEE
     {
-        public decimal EMP_ID { get; set; }
+        public string EMP_ID { get; set; }
         public string NAME { get; set; }
         public string PHONENUMBER { get; set; }
         public string EMP_TYPE { get; set; }

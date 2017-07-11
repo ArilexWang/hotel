@@ -31,11 +31,11 @@
     <Key>
       <PropertyRef Name="EMP_ID" />
     </Key>
-    <Property Name="EMP_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
     <Property Name="NAME" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="PHONENUMBER" Type="varchar2" MaxLength="20" />
     <Property Name="EMP_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="BONUS" Type="number" Precision="38" Scale="0" />
+    <Property Name="EMP_ID" Type="varchar2" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="HOTEL_EMPLOYEE_TYPE">
     <Key>

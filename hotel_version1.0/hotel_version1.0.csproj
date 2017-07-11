@@ -209,6 +209,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HOTEL_BILLController.cs" />
     <Compile Include="Controllers\HOTEL_CUSTOMERController.cs" />
+    <Compile Include="Controllers\HOTEL_EMPLOYEEController.cs" />
+    <Compile Include="Controllers\HOTEL_ORDERController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -362,6 +364,17 @@
     <Content Include="Views\HOTEL_CUSTOMER\Edit.cshtml" />
     <Content Include="Views\HOTEL_CUSTOMER\Index.cshtml" />
     <Content Include="Views\HOTEL_CUSTOMER\Error.cshtml" />
+    <Content Include="Views\HOTEL_ORDER\Create.cshtml" />
+    <Content Include="Views\HOTEL_ORDER\Delete.cshtml" />
+    <Content Include="Views\HOTEL_ORDER\Details.cshtml" />
+    <Content Include="Views\HOTEL_ORDER\Edit.cshtml" />
+    <Content Include="Views\HOTEL_ORDER\Index.cshtml" />
+    <Content Include="Views\HOTEL_BILL\Error.cshtml" />
+    <Content Include="Views\HOTEL_EMPLOYEE\Create.cshtml" />
+    <Content Include="Views\HOTEL_EMPLOYEE\Delete.cshtml" />
+    <Content Include="Views\HOTEL_EMPLOYEE\Details.cshtml" />
+    <Content Include="Views\HOTEL_EMPLOYEE\Edit.cshtml" />
+    <Content Include="Views\HOTEL_EMPLOYEE\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

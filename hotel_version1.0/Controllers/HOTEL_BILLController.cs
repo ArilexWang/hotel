@@ -36,14 +36,20 @@ namespace hotel_version1._0.Controllers
                        where p.HOTEL_CUSTOMER.NAME == searchString
                        select p;
 
-            if (test == null)
+            if (test.Count() == 0)
             {
-                return HttpNotFound();
+                return RedirectToAction("Error");
             }
+
             return View(test.ToList());
         }
 
+        public ActionResult Error()
+        {
+            var all_bill = db.HOTEL_ORDER.Include(h => h.HOTEL_BILL).Include(m => m.HOTEL_ORDER_SERVICE).Include(j => j.HOTEL_ITEM_USED);
 
+            return View(all_bill.ToList());
+        }
 
         // GET: HOTEL_BILL/Details/5
         public ActionResult Details(string id)
