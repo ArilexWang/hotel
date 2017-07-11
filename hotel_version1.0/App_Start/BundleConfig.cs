@@ -28,7 +28,8 @@ namespace hotel_version1._0
                       "~/Content/bootstrap.css",
                       "~/Content/Site.css",
                       "~/Content/Navigation.css",
-                      "~/Content/contentBox.css"
+                      "~/Content/contentBox.css",
+                      "~/Content/resign_view"
                      ));
         }
     }

@@ -21,6 +21,24 @@ namespace hotel_version1._0.Controllers
             return View(hOTEL_ORDER.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Index(FormCollection fc, String searchString)
+        {
+
+            if (searchString == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            var result = from a in db.HOTEL_ORDER
+                          join b in db.HOTEL_CUSTOMER
+            on a.CUS_ID equals b.CUS_ID
+                          where b.NAME == searchString||a.ORDER_ID==searchString
+                          select a;
+            if (result.Count() != 0)
+                return View(result.ToList());
+
+            return RedirectToAction("Error");
+
+        }
+
         // GET: HOTEL_ORDER/Details/5
         public ActionResult Details(string id)
         {

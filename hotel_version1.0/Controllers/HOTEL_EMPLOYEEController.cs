@@ -21,6 +21,36 @@ namespace hotel_version1._0.Controllers
             return View(hOTEL_EMPLOYEE.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Index(String searchString)
+        {
+            if (searchString == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            var result = from a in db.HOTEL_EMPLOYEE
+                         where a.NAME == searchString || a.EMP_ID == searchString || a.PHONENUMBER == searchString || a.EMP_TYPE == searchString
+                         select a;
+            if (result.Count() != 0)
+                return View(result.ToList());
+            else
+                return RedirectToAction("Error");
+
+        }
+
+        public ActionResult Error()
+        {
+            var hOTEL_EMPLOYEE = db.HOTEL_EMPLOYEE.Include(h => h.HOTEL_EMPLOYEE_TYPE);
+            return View(hOTEL_EMPLOYEE.ToList());
+        }
+
+        [HttpPost]
+        public string Index(FormCollection fc, string msg, string mymessage)
+        {
+            var hOTEL_EMPLOYEE = db.HOTEL_EMPLOYEE.Include(h => h.HOTEL_EMPLOYEE_TYPE);
+            return "abd";
+        }
+
+
         // GET: HOTEL_EMPLOYEE/Details/5
         public ActionResult Details(string id)
         {

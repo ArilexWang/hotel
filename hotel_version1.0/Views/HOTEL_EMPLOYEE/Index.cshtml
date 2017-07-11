@@ -10,6 +10,23 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm("Index", "HOTEL_EMPLOYEE", FormMethod.Post))
+{
+    <div class="searchBlock">
+        @Html.TextBox("searchString")
+        <input type="submit" value="搜索" />
+    </div>
+}
+
+@*@using (Html.BeginForm("Index", "HOTEL_EMPLOYEE",new { EMP_ID = "EMP_ID" }, FormMethod.Post, new { id = "sortID", @class = "navbar-right" }))
+{
+@Html.AntiForgeryToken()
+
+<input type="image" src="~/Content/arrow.png" alt="submit" name="msg" value="down" />
+
+}*@
+
+
 <table class="table-1">
     <tr>
         <th>
@@ -57,7 +74,6 @@
 
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.EMP_ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.EMP_ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.EMP_ID })
             </td>
         </tr>

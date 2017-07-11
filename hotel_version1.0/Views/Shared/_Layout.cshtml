@@ -22,7 +22,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "BILLs")</li>
+                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
                     <li>@Html.ActionLink("关于", "About", "Home")</li>
                     <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
                 </ul>
@@ -42,7 +42,7 @@
 
             <ul class="messageBox">
                 <li class="Home">
-                    <a class="list" href="http://localhost:50606/HOTEL_BILL/Index">主页</a>
+                    <a class="list" href="/Home/Index">主页</a>
                 </li>
                 <li class="Sub_cata">
                     <a class="list" href="">房间信息</a>
@@ -52,9 +52,6 @@
                 </li>
                 <li class="Sub_cata">
                     @Html.ActionLink("员工信息", "Index", "HOTEL_EMPLOYEE")
-                </li>
-                <li class="Sub_cata">
-                    <a class="list" href="">值班信息</a>
                 </li>
                 <li class="Sub_cata">
                     @Html.ActionLink("订单信息", "Index", "HOTEL_ORDER")

@@ -9,7 +9,7 @@
 @using (Html.BeginForm("Index", "HOTEL_BILL", FormMethod.Post))
 {
     <div class="searchBlock">
-        顾客姓名: @Html.TextBox("searchString")
+        @Html.TextBox("searchString")
         <input type="submit" value="搜索" />
     </div>
 }

@@ -45,32 +45,19 @@ namespace hotel_version1._0.Controllers
         {
             if (searchString == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            if (searchString.Length == 11 && IsNumberic(searchString))
-            {
-                var result = from a in db.HOTEL_CUSTOMER
-                             where a.TEL_NUMBER == searchString
-                             select a;
-                return View(result.ToList());
-            }
-            else if (searchString.Length == 5 && IsNumberic(searchString))
-            {
-                var result = from a in db.HOTEL_CUSTOMER
-                             where a.CUS_ID == searchString
-                             select a;
-                return View(result.ToList());
-            }
 
-            var result2 = from a in db.HOTEL_CUSTOMER
-                          where a.NAME == searchString
-                          select a;
-            if (result2.Count() != 0)
-                return View(result2.ToList());
+            var result = from a in db.HOTEL_CUSTOMER
+                         where a.TEL_NUMBER == searchString || a.CUS_ID == searchString|| a.CUS_ID == searchString
+                         select a;
+           
+            if (result.Count() != 0)
+                return View(result.ToList());
             else
                 return RedirectToAction("Error");
 
         }
 
-
+        
 
         // GET: HOTEL_CUSTOMER/Details/5
         public ActionResult Details(string id)

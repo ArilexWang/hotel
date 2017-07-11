@@ -10,13 +10,14 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@using (Html.BeginForm("Index", "HOTEL_CUSTOMER", FormMethod.Post))
+@using (Html.BeginForm("Index", "HOTEL_ORDER", FormMethod.Post))
 {
     <div class="searchBlock">
         @Html.TextBox("searchString")
         <input type="submit" value="搜索" />
     </div>
 }
+
 <table class="table-1">
     <tr>
         <th>
@@ -58,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.STATUS)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ORDER_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ORDER_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ORDER_ID })
+            
+            @Html.ActionLink("Details", "Details", new { id=item.ORDER_ID })
+            
         </td>
     </tr>
 }

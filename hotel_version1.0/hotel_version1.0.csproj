@@ -211,6 +211,7 @@
     <Compile Include="Controllers\HOTEL_CUSTOMERController.cs" />
     <Compile Include="Controllers\HOTEL_EMPLOYEEController.cs" />
     <Compile Include="Controllers\HOTEL_ORDERController.cs" />
+    <Compile Include="Controllers\HOTEL_USERController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -280,6 +281,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\contentBox.css" />
     <Content Include="Content\Navigation.css" />
+    <Content Include="Content\resign_view.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -327,7 +329,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -375,6 +376,14 @@
     <Content Include="Views\HOTEL_EMPLOYEE\Details.cshtml" />
     <Content Include="Views\HOTEL_EMPLOYEE\Edit.cshtml" />
     <Content Include="Views\HOTEL_EMPLOYEE\Index.cshtml" />
+    <Content Include="Views\HOTEL_BILL\_ViewStart.cshtml" />
+    <Content Include="Views\HOTEL_USER\Create.cshtml" />
+    <Content Include="Views\HOTEL_USER\Delete.cshtml" />
+    <Content Include="Views\HOTEL_USER\Details.cshtml" />
+    <Content Include="Views\HOTEL_USER\Edit.cshtml" />
+    <Content Include="Views\HOTEL_USER\Index.cshtml" />
+    <Content Include="Views\HOTEL_USER\Logout.cshtml" />
+    <Content Include="Views\HOTEL_USER\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
