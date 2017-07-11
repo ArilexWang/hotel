@@ -100,4 +100,3 @@ c:\users\alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_versi
 c:\users\alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 c:\users\alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.dll
 c:\users\alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.pdb
-c:\users\alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.csprojResolveAssemblyReference.cache

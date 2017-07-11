@@ -18,7 +18,7 @@ namespace hotel_version1._0.Controllers
         public ActionResult Index()
         {
             var all_bill = db.HOTEL_ORDER.Include(h => h.HOTEL_BILL).Include(m => m.HOTEL_ORDER_SERVICE).Include(j => j.HOTEL_ITEM_USED);
-
+            ViewBag.SelCat = "bill";
             return View(all_bill.ToList());
 
         }

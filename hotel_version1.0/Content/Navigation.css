@@ -86,11 +86,31 @@ a:hover{
     width: 200px;
     height: 71px;
     
+    display:block;
+
     
+
     font-size: 24px;
     position: relative;
     text-decoration:none;
 }
+
+.Sub_cate_active{
+     width: 200px;
+    height: 71px;
+    
+    
+    font-size: 24px;
+    
+    color:white;
+
+    position: relative;
+    text-decoration:none;
+    display:inline-block;
+    background-color: #A8BFDE;
+}
+
+
 
 ul{
     list-style:none;
@@ -102,3 +122,4 @@ ul{
     display: block;
     position: absolute;
 }
+

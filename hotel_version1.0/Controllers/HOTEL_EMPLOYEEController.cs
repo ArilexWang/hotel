@@ -17,6 +17,7 @@ namespace hotel_version1._0.Controllers
         // GET: HOTEL_EMPLOYEE
         public ActionResult Index()
         {
+            ViewBag.SelCat = "employee";
             var hOTEL_EMPLOYEE = db.HOTEL_EMPLOYEE.Include(h => h.HOTEL_EMPLOYEE_TYPE);
             return View(hOTEL_EMPLOYEE.ToList());
         }
@@ -24,6 +25,7 @@ namespace hotel_version1._0.Controllers
         [HttpPost]
         public ActionResult Index(String searchString)
         {
+            ViewBag.SelCat = "employee";
             if (searchString == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
@@ -39,6 +41,7 @@ namespace hotel_version1._0.Controllers
 
         public ActionResult Error()
         {
+            ViewBag.SelCat = "employee";
             var hOTEL_EMPLOYEE = db.HOTEL_EMPLOYEE.Include(h => h.HOTEL_EMPLOYEE_TYPE);
             return View(hOTEL_EMPLOYEE.ToList());
         }

@@ -17,6 +17,7 @@ namespace hotel_version1._0.Controllers
         // GET: HOTEL_ORDER
         public ActionResult Index()
         {
+            ViewBag.SelCat = "order";
             var hOTEL_ORDER = db.HOTEL_ORDER.Include(h => h.HOTEL_BILL).Include(h => h.HOTEL_CUSTOMER).Include(h => h.HOTEL_ROOM);
             return View(hOTEL_ORDER.ToList());
         }
@@ -24,7 +25,7 @@ namespace hotel_version1._0.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection fc, String searchString)
         {
-
+            ViewBag.SelCat = "order";
             if (searchString == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             var result = from a in db.HOTEL_ORDER

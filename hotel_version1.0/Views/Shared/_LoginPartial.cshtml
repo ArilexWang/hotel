@@ -9,20 +9,18 @@
         <ul class="nav navbar-nav navbar-right">
             <li>
                 
-                @Html.ActionLink("你好，" + Session["USER_ID"].ToString() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink("你好，" + Session["USER_ID"].ToString() + "!", "Index", "Home")
+
             </li>
 
             <li>
                 @Html.ActionLink("注销", "Logout", "HOTEL_USER")
             </li>
-            @*<li><a href=Request.Url.Port>注销</a></li>*@
+         
         </ul>
     }
 }
 else
 {
-    @*<ul class="nav navbar-nav navbar-right">
-            <li>@Html.ActionLink("注册", "Register", "HOTEL_USER", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-            <li>@Html.ActionLink("登录", "Index", "HOTEL_USER", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-        </ul>*@
+    
 }

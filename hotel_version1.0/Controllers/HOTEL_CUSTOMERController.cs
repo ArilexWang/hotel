@@ -37,17 +37,19 @@ namespace hotel_version1._0.Controllers
         // GET: HOTEL_CUSTOMER
         public ActionResult Index()
         {
+            ViewBag.SelCat = "customer";
             return View(db.HOTEL_CUSTOMER.ToList());
         }
 
         [HttpPost]
         public ActionResult Index(String searchString)
         {
+            ViewBag.SelCat = "customer";
             if (searchString == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
             var result = from a in db.HOTEL_CUSTOMER
-                         where a.TEL_NUMBER == searchString || a.CUS_ID == searchString|| a.CUS_ID == searchString
+                         where a.TEL_NUMBER == searchString || a.NAME == searchString|| a.CUS_ID == searchString
                          select a;
            
             if (result.Count() != 0)
