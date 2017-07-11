@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HOTEL">
+    <Key>
+      <PropertyRef Name="HOTEL_ID" />
+    </Key>
+    <Property Name="HOTEL_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="CITY" Type="varchar2" MaxLength="20" />
+    <Property Name="STREET" Type="varchar2" MaxLength="20" />
+    <Property Name="NUMBERR" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HOTEL_BILL">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="SERVICE_PRICE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ROOM_PRICE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ITEM_PRICE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HOTEL_CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUS_ID" />
+    </Key>
+    <Property Name="CUS_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="REPUTATION" Type="varchar2" MaxLength="20" />
+    <Property Name="TEL_NUMBER" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HOTEL_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PHONENUMBER" Type="varchar2" MaxLength="20" />
+    <Property Name="EMP_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="BONUS" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HOTEL_EMPLOYEE_TYPE">
+    <Key>
+      <PropertyRef Name="EMP_TYPE" />
+    </Key>
+    <Property Name="EMP_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="SALARY" Type="number" Precision="38" Scale="0" />
+    <Property Name="TYPE_LEVEL" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HOTEL_ITEM">
+    <Key>
+      <PropertyRef Name="TYPE" />
+    </Key>
+    <Property Name="TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PRICE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HOTEL_ITEM_USED">
+    <Key>
+      <PropertyRef Name="ITEM_TYPE" />
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="ORDER_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="NUM" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOTEL_OCCUPIED">
+    <Key>
+      <PropertyRef Name="HOTEL_ID" />
+      <PropertyRef Name="PRE_DATE" />
+    </Key>
+    <Property Name="HOTEL_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PRE_DATE" Type="date" Nullable="false" />
+    <Property Name="ROOM_NUM" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HOTEL_ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="CHECK_IN_TIME" Type="date" />
+    <Property Name="CHECK_OUT_TIME" Type="date" />
+    <Property Name="RESERVE_TIME" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="20" />
+    <Property Name="PRE_ORDER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="CUS_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="ROOM_NUM" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="HOTEL_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOTEL_ORDER_SERVICE">
+    <Key>
+      <PropertyRef Name="SERVICE_TYPE" />
+      <PropertyRef Name="TIME" />
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="SERVICE_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="TIME" Type="date" Nullable="false" />
+    <Property Name="EMP_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="ORDER_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOTEL_ROOM">
+    <Key>
+      <PropertyRef Name="ROOM_NUM" />
+      <PropertyRef Name="HOTEL_ID" />
+    </Key>
+    <Property Name="ROOM_TYPE" Type="varchar2" MaxLength="20" />
+    <Property Name="PRICE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ROOM_NUM" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="HOTEL_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOTEL_SERVICE">
+    <Key>
+      <PropertyRef Name="SERVICE_TYPE" />
+    </Key>
+    <Property Name="SERVICE_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PRICE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HOTEL_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <Association Name="CUSTOMER_ID_FK">
+    <End Role="HOTEL_CUSTOMER" Type="Self.HOTEL_CUSTOMER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_CUSTOMER">
+        <PropertyRef Name="CUS_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER">
+        <PropertyRef Name="CUS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EMP_TYPE_FK">
+    <End Role="HOTEL_EMPLOYEE_TYPE" Type="Self.HOTEL_EMPLOYEE_TYPE" Multiplicity="1" />
+    <End Role="HOTEL_EMPLOYEE" Type="Self.HOTEL_EMPLOYEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_EMPLOYEE_TYPE">
+        <PropertyRef Name="EMP_TYPE" />
+      </Principal>
+      <Dependent Role="HOTEL_EMPLOYEE">
+        <PropertyRef Name="EMP_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HOTEL_ORDER_SERVICE_FK1">
+    <End Role="HOTEL_SERVICE" Type="Self.HOTEL_SERVICE" Multiplicity="1" />
+    <End Role="HOTEL_ORDER_SERVICE" Type="Self.HOTEL_ORDER_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_SERVICE">
+        <PropertyRef Name="SERVICE_TYPE" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER_SERVICE">
+        <PropertyRef Name="SERVICE_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HOTEL_ROOM_FK1">
+    <End Role="HOTEL" Type="Self.HOTEL" Multiplicity="1" />
+    <End Role="HOTEL_ROOM" Type="Self.HOTEL_ROOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL">
+        <PropertyRef Name="HOTEL_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ROOM">
+        <PropertyRef Name="HOTEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HOTEL_ROOM_SERVICE_FK1">
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_ORDER_SERVICE" Type="Self.HOTEL_ORDER_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER_SERVICE">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ITEM_TYPE_FK">
+    <End Role="HOTEL_ITEM" Type="Self.HOTEL_ITEM" Multiplicity="1" />
+    <End Role="HOTEL_ITEM_USED" Type="Self.HOTEL_ITEM_USED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ITEM">
+        <PropertyRef Name="TYPE" />
+      </Principal>
+      <Dependent Role="HOTEL_ITEM_USED">
+        <PropertyRef Name="ITEM_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORDER_ID_FK">
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="1" />
+    <End Role="HOTEL_ITEM_USED" Type="Self.HOTEL_ITEM_USED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ITEM_USED">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORDER_ID_FK1">
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_BILL" Type="Self.HOTEL_BILL" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_BILL">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ROOM_NUM_FK">
+    <End Role="HOTEL_ROOM" Type="Self.HOTEL_ROOM" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ROOM">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ROOM_NUM_HOTEL_ID_FK1">
+    <End Role="HOTEL_ROOM" Type="Self.HOTEL_ROOM" Multiplicity="0..1" />
+    <End Role="HOTEL_OCCUPIED" Type="Self.HOTEL_OCCUPIED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ROOM">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_OCCUPIED">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="HOTEL" EntityType="Self.HOTEL" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_BILL" EntityType="Self.HOTEL_BILL" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_CUSTOMER" EntityType="Self.HOTEL_CUSTOMER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_EMPLOYEE" EntityType="Self.HOTEL_EMPLOYEE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_EMPLOYEE_TYPE" EntityType="Self.HOTEL_EMPLOYEE_TYPE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_ITEM" EntityType="Self.HOTEL_ITEM" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_ITEM_USED" EntityType="Self.HOTEL_ITEM_USED" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_OCCUPIED" EntityType="Self.HOTEL_OCCUPIED" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_ORDER" EntityType="Self.HOTEL_ORDER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_ORDER_SERVICE" EntityType="Self.HOTEL_ORDER_SERVICE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_ROOM" EntityType="Self.HOTEL_ROOM" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_SERVICE" EntityType="Self.HOTEL_SERVICE" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="HOTEL_USER" EntityType="Self.HOTEL_USER" Schema="SYSTEM" store:Type="Tables" />
+    <AssociationSet Name="CUSTOMER_ID_FK" Association="Self.CUSTOMER_ID_FK">
+      <End Role="HOTEL_CUSTOMER" EntitySet="HOTEL_CUSTOMER" />
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="EMP_TYPE_FK" Association="Self.EMP_TYPE_FK">
+      <End Role="HOTEL_EMPLOYEE_TYPE" EntitySet="HOTEL_EMPLOYEE_TYPE" />
+      <End Role="HOTEL_EMPLOYEE" EntitySet="HOTEL_EMPLOYEE" />
+    </AssociationSet>
+    <AssociationSet Name="HOTEL_ORDER_SERVICE_FK1" Association="Self.HOTEL_ORDER_SERVICE_FK1">
+      <End Role="HOTEL_SERVICE" EntitySet="HOTEL_SERVICE" />
+      <End Role="HOTEL_ORDER_SERVICE" EntitySet="HOTEL_ORDER_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="HOTEL_ROOM_FK1" Association="Self.HOTEL_ROOM_FK1">
+      <End Role="HOTEL" EntitySet="HOTEL" />
+      <End Role="HOTEL_ROOM" EntitySet="HOTEL_ROOM" />
+    </AssociationSet>
+    <AssociationSet Name="HOTEL_ROOM_SERVICE_FK1" Association="Self.HOTEL_ROOM_SERVICE_FK1">
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+      <End Role="HOTEL_ORDER_SERVICE" EntitySet="HOTEL_ORDER_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="ITEM_TYPE_FK" Association="Self.ITEM_TYPE_FK">
+      <End Role="HOTEL_ITEM" EntitySet="HOTEL_ITEM" />
+      <End Role="HOTEL_ITEM_USED" EntitySet="HOTEL_ITEM_USED" />
+    </AssociationSet>
+    <AssociationSet Name="ORDER_ID_FK" Association="Self.ORDER_ID_FK">
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+      <End Role="HOTEL_ITEM_USED" EntitySet="HOTEL_ITEM_USED" />
+    </AssociationSet>
+    <AssociationSet Name="ORDER_ID_FK1" Association="Self.ORDER_ID_FK1">
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+      <End Role="HOTEL_BILL" EntitySet="HOTEL_BILL" />
+    </AssociationSet>
+    <AssociationSet Name="ROOM_NUM_FK" Association="Self.ROOM_NUM_FK">
+      <End Role="HOTEL_ROOM" EntitySet="HOTEL_ROOM" />
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="ROOM_NUM_HOTEL_ID_FK1" Association="Self.ROOM_NUM_HOTEL_ID_FK1">
+      <End Role="HOTEL_ROOM" EntitySet="HOTEL_ROOM" />
+      <End Role="HOTEL_OCCUPIED" EntitySet="HOTEL_OCCUPIED" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<hotel_version1._0.HOTEL_CUSTOMER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>客户信息</h2>
+<br />
+<h4 style="display:inline-block;">
+    @Html.ActionLink("新建", "Create")
+</h4>
+
+@using (Html.BeginForm("Index", "HOTEL_CUSTOMER", FormMethod.Post))
+{
+    <div class="searchBlock">
+        @Html.TextBox("searchString")
+        <input type="submit" value="搜索" />
+    </div>
+}
+<table class="table-1">
+    <tr>
+        <th>
+            <strong>客户身份证号</strong>
+        </th>
+        <th>
+            <strong>客户姓名</strong>
+        </th>
+
+        <th>
+            <strong>信用等级</strong>
+        </th>
+
+        <th>
+            <strong>客户电话</strong>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUS_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPUTATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEL_NUMBER)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CUS_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CUS_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CUS_ID })
+        </td>
+    </tr>
+}
+
+</table>

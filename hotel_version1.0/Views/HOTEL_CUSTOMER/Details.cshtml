@@ -1,0 +1,35 @@
+﻿@model IQueryable<hotel_version1._0.HOTEL_ORDER>
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>客户消费细则</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        @foreach (var item in Model)
+        {
+            <dt>
+                订单号
+            </dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.ORDER_ID)
+            </dd>
+
+            <dt>
+                入住时间
+            </dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.CHECK_IN_TIME)
+            </dd>
+            <dt></dt>
+        }
+        </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
