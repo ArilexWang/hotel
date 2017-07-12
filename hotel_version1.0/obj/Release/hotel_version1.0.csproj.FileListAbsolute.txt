@@ -98,5 +98,5 @@ C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_versi
 C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.dll
-C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.pdb
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Release\hotel_version1.0.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Release\hotel_version1.0.pdb

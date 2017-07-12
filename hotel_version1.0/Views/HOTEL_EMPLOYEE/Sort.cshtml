@@ -18,45 +18,43 @@
     </div>
 }
 
-
-
 <table class="table-1">
     <tr>
         <th>
-            
-            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_ID" } ,  FormMethod.Post))
+
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_ID" }, FormMethod.Post))
             {
-                <input type="submit" value="职工号" class="sortInput"  />
+                <input type="submit" value="职工号" class="sortInput" />
             }
         </th>
         <th>
             @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "NAME" }, FormMethod.Post))
             {
-                <input type="submit" value="职工姓名" class="sortInput"  />
+                <input type="submit" value="职工姓名" class="sortInput" />
             }
         </th>
         <th>
             @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_TYPE" }, FormMethod.Post))
             {
-                <input type="submit" value="职工部门" class="sortInput"  />
+                <input type="submit" value="职工部门" class="sortInput" />
             }
         </th>
         <th>
             @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_TEL" }, FormMethod.Post))
             {
-                <input type="submit" value="电话号码" class="sortInput"  />
+                <input type="submit" value="电话号码" class="sortInput" />
             }
         </th>
         <th>
             @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "SALARY" }, FormMethod.Post))
             {
-                <input type="submit" value="薪资" class="sortInput"  />
+                <input type="submit" value="薪资" class="sortInput" />
             }
         </th>
         <th>
             @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "BONUS" }, FormMethod.Post))
             {
-                <input type="submit" value="奖金" class="sortInput"  />
+                <input type="submit" value="奖金" class="sortInput" />
             }
         </th>
         <th></th>

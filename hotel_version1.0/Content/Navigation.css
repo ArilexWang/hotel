@@ -41,6 +41,8 @@ a:hover{
     background-color: transparent;
     border: 0px;
     
+    display:block;
+
     position: absolute;
     margin-top: 30px;
     left: 180px;
@@ -67,18 +69,38 @@ a:hover{
     position: relative;
     display: block;
     float:left;
+    
+
 
     z-index: 9;
 }
 
 .Home{
+    display:block;
     width: 200px;
-    height: 71px;
+    height: 70px;
     
-    margin-top: 70px;
+    margin-top: 80px;
+
 
     font-size: 30px;
     position: relative;
+    
+}
+
+.Home_active{
+    width: 200px;
+    height: 70px;
+
+    color:white;
+
+    display:block;
+    
+    margin-top: 80px;
+
+    font-size: 30px;
+    position: relative;
+    background-color: #A8BFDE;
     
 }
 
@@ -104,6 +126,8 @@ a:hover{
     
     color:white;
 
+    display:block;
+
     position: relative;
     text-decoration:none;
     display:inline-block;
@@ -123,3 +147,9 @@ ul{
     position: absolute;
 }
 
+.sortInput{
+    border:none; 
+    background-color:white;
+    font-family: Verdana;
+    color: #708DAC;
+}

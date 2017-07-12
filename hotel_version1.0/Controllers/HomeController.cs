@@ -10,6 +10,7 @@ namespace hotel_version1._0.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.SelCat = "home";
             return View();
         }
 

@@ -384,6 +384,8 @@
     <Content Include="Views\HOTEL_USER\Index.cshtml" />
     <Content Include="Views\HOTEL_USER\Logout.cshtml" />
     <Content Include="Views\HOTEL_USER\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\HOTEL_EMPLOYEE\Sort.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

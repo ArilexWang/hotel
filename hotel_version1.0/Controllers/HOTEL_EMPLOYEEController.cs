@@ -13,7 +13,7 @@ namespace hotel_version1._0.Controllers
     public class HOTEL_EMPLOYEEController : Controller
     {
         private Entities db = new Entities();
-
+        static bool[] ascMsg = new bool[7] { true, true, true, true,true,true,true};
         // GET: HOTEL_EMPLOYEE
         public ActionResult Index()
         {
@@ -38,6 +38,104 @@ namespace hotel_version1._0.Controllers
                 return RedirectToAction("Error");
 
         }
+
+        [HttpPost]
+       
+        public ActionResult Sort(string message)
+        {
+            var sort_employee = db.HOTEL_EMPLOYEE.Include(h => h.HOTEL_EMPLOYEE_TYPE);
+
+            IOrderedQueryable<HOTEL_EMPLOYEE> result = null;
+            if (message == "EMP_ID")
+            {
+                if (ascMsg[0])
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.EMP_ID ascending
+                             select a;
+                }
+                else
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.EMP_ID descending
+                             select a;
+                }
+                ascMsg[0] = !ascMsg[0];
+
+            }
+            else if (message == "NAME")
+            {
+                if (ascMsg[1])
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.NAME ascending
+                             select a;
+                }
+                else
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.NAME descending
+                             select a;
+                }
+                ascMsg[1] = !ascMsg[1];
+            }
+            else if (message == "SALARY")
+            {
+                if (ascMsg[2])
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.HOTEL_EMPLOYEE_TYPE.SALARY ascending
+                             select a;
+                }
+                else
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.HOTEL_EMPLOYEE_TYPE.SALARY descending
+                             select a;
+                }
+                ascMsg[2] = !ascMsg[2];
+            }
+            else if (message == "BONUS")
+            {
+                if (ascMsg[3])
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.BONUS ascending
+                             select a;
+                }
+                else
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.BONUS descending
+                             select a;
+                }
+                ascMsg[3] = !ascMsg[3];
+            }
+            else if (message == "EMP_TYPE")
+            {
+                if (ascMsg[4])
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.EMP_TYPE ascending
+                             select a;
+                }
+                else
+                {
+                    result = from a in db.HOTEL_EMPLOYEE
+                             orderby a.EMP_TYPE descending
+                             select a;
+                }
+                ascMsg[4] = !ascMsg[4];
+            }
+
+            if (result != null && result.Count() != 0)
+                return View(result.ToList());
+            else
+                return View(sort_employee.ToList());
+            
+
+        }
+
 
         public ActionResult Error()
         {
