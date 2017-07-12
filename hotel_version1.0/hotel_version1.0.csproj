@@ -280,6 +280,37 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\contentBox.css" />
+    <Content Include="Content\fonts\BebasNeue-webfont.svg" />
+    <Content Include="Content\fonts\Dharma Type Font License.txt" />
+    <Content Include="Content\fonts\fontomas-webfont.svg" />
+    <Content Include="Content\fonts\franchise-bold-webfont.svg" />
+    <Content Include="Content\img\a17.png" />
+    <Content Include="Content\img\alila\1.jpg" />
+    <Content Include="Content\img\alila\10.jpg" />
+    <Content Include="Content\img\alila\11.jpg" />
+    <Content Include="Content\img\alila\12.jpg" />
+    <Content Include="Content\img\alila\2.jpg" />
+    <Content Include="Content\img\alila\3.jpg" />
+    <Content Include="Content\img\alila\4.jpg" />
+    <Content Include="Content\img\alila\5.jpg" />
+    <Content Include="Content\img\alila\6.jpg" />
+    <Content Include="Content\img\alila\7.jpg" />
+    <Content Include="Content\img\alila\8.jpg" />
+    <Content Include="Content\img\alila\9.jpg" />
+    <Content Include="Content\img\alila\thumb-01.jpg" />
+    <Content Include="Content\img\alila\thumb-02.jpg" />
+    <Content Include="Content\img\alila\thumb-03.jpg" />
+    <Content Include="Content\img\alila\thumb-04.jpg" />
+    <Content Include="Content\img\alila\thumb-05.jpg" />
+    <Content Include="Content\img\alila\thumb-06.jpg" />
+    <Content Include="Content\img\alila\thumb-07.jpg" />
+    <Content Include="Content\img\alila\thumb-08.jpg" />
+    <Content Include="Content\img\alila\thumb-09.jpg" />
+    <Content Include="Content\img\alila\thumb-10.jpg" />
+    <Content Include="Content\img\alila\thumb-11.jpg" />
+    <Content Include="Content\img\alila\thumb-12.jpg" />
+    <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\loading.gif" />
     <Content Include="Content\Navigation.css" />
     <Content Include="Content\resign_view.css" />
     <Content Include="favicon.ico" />
@@ -308,14 +339,26 @@
     <Content Include="hoteldata.edmx.diagram">
       <DependentUpon>hoteldata.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\BebasNeue-webfont.eot" />
+    <Content Include="Content\fonts\BebasNeue-webfont.ttf" />
+    <Content Include="Content\fonts\BebasNeue-webfont.woff" />
+    <Content Include="Content\fonts\fontomas-webfont.eot" />
+    <Content Include="Content\fonts\fontomas-webfont.ttf" />
+    <Content Include="Content\fonts\fontomas-webfont.woff" />
+    <Content Include="Content\fonts\franchise-bold-webfont.eot" />
+    <Content Include="Content\fonts\franchise-bold-webfont.ttf" />
+    <Content Include="Content\fonts\franchise-bold-webfont.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-2.0.0.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jssor.js" />
+    <Content Include="Scripts\jssor.slider.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\navigationControl.js" />
     <Content Include="Scripts\respond.js" />
@@ -386,6 +429,8 @@
     <Content Include="Views\HOTEL_USER\Error.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\HOTEL_EMPLOYEE\Sort.cshtml" />
+    <Content Include="Views\HOTEL_CUSTOMER\Sort.cshtml" />
+    <Content Include="Views\HOTEL_ORDER\Sort.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -12,7 +12,7 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="~/Content/resign_view.css" />
 </head>
-<body>
+<body class="body1">
     <header>
         <br /><br /><br /><br />
     </header>
@@ -28,6 +28,7 @@
                             var attrs1 = new Dictionary<string, object>();
                             attrs1.Add("class", "uname");
                             attrs1.Add("data-icon", "u");
+
                         }
                         @Html.Label("用户名", attrs1)
                         @Html.TextBox("searchString1", null, new { @class = "form-control", placeholder = "USERID" })
@@ -54,4 +55,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
 }

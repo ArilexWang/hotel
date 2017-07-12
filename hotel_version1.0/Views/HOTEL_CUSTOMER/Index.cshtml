@@ -20,18 +20,34 @@
 <table class="table-1">
     <tr>
         <th>
-            <strong>客户身份证号</strong>
+            @using (Html.BeginForm("Sort", "HOTEL_CUSTOMER", new { message = "CUS_ID" }, FormMethod.Post))
+            {
+                <input type="submit" value="客户身份证号" class="sortInput" />
+            }
+           
         </th>
         <th>
-            <strong>客户姓名</strong>
+            
+            @using (Html.BeginForm("Sort", "HOTEL_CUSTOMER", new { message = "NAME" }, FormMethod.Post))
+            {
+                <input type="submit" value="客户姓名" class="sortInput" />
+            }
         </th>
 
         <th>
-            <strong>信用等级</strong>
+            @using (Html.BeginForm("Sort", "HOTEL_CUSTOMER", new { message = "REPUTATION" }, FormMethod.Post))
+            {
+                <input type="submit" value="信用等级" class="sortInput" />
+            }
+            
         </th>
 
         <th>
-            <strong>客户电话</strong>
+            @using (Html.BeginForm("Sort", "HOTEL_CUSTOMER", new { message = "CUS_TEL" }, FormMethod.Post))
+            {
+                <input type="submit" value="客户电话" class="sortInput" />
+            }
+           
         </th>
         <th></th>
     </tr>

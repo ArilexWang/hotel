@@ -144,12 +144,7 @@ namespace hotel_version1._0.Controllers
             return View(hOTEL_EMPLOYEE.ToList());
         }
 
-        [HttpPost]
-        public string Index(FormCollection fc, string msg, string mymessage)
-        {
-            var hOTEL_EMPLOYEE = db.HOTEL_EMPLOYEE.Include(h => h.HOTEL_EMPLOYEE_TYPE);
-            return "abd";
-        }
+ 
 
 
         // GET: HOTEL_EMPLOYEE/Details/5

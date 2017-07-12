@@ -13,7 +13,7 @@
 @using (Html.BeginForm("Index", "HOTEL_EMPLOYEE", FormMethod.Post))
 {
     <div class="searchBlock">
-        @Html.TextBox("searchString")
+        @Html.TextBox("searchString",null ,new { @class = "textBox" })
         <input type="submit" value="搜索" style="border:none; background-color:white;" />
     </div>
 }

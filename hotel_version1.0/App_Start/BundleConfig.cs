@@ -22,14 +22,16 @@ namespace hotel_version1._0
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
-                      "~/Scripts/navigationControl.js"));
+                      "~/Scripts/navigationControl.js",
+                      "~/Scripts/jssor.js",
+                      "~/Scripts/jssor.slider.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/Site.css",
                       "~/Content/Navigation.css",
                       "~/Content/contentBox.css",
-                      "~/Content/resign_view"
+                      "~/Content/resign_view.css"
                      ));
         }
     }

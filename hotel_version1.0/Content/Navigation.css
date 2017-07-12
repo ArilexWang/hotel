@@ -110,8 +110,6 @@ a:hover{
     
     display:block;
 
-    
-
     font-size: 24px;
     position: relative;
     text-decoration:none;
@@ -152,4 +150,8 @@ ul{
     background-color:white;
     font-family: Verdana;
     color: #708DAC;
+}
+
+.textBox{
+    width: 180px;
 }

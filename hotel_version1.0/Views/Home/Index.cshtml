@@ -1,31 +1,282 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<html>
+<body >
+    <!-- it works the same with all jquery version from 1.x to 2.x -->
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.0.min.js"></script>
+    <!-- use jssor.slider.mini.js (40KB) instead for release -->
+    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+    <script type="text/javascript" src="~/Scripts/jssor.js"></script>
+    <script type="text/javascript" src="~/Scripts/jssor.slider.js"></script>
+    <script>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        jQuery(document).ready(function ($) {
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            var _SlideshowTransitions = [
+            //Fade in L
+                   { $Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out R
+                , { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade in R
+                , { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out L
+                , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in T
+                , { $Duration: 1200, y: 0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out B
+                , { $Duration: 1200, y: -0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade in B
+                , { $Duration: 1200, y: -0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out T
+                , { $Duration: 1200, y: 0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade in TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in LR Chess
+                , { $Duration: 1200, y: 0.3, $Cols: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out LR Chess
+                , { $Duration: 1200, y: -0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade in TB Chess
+                , { $Duration: 1200, x: 0.3, $Rows: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out TB Chess
+                , { $Duration: 1200, x: -0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+
+            //Fade Clip in H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip out H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip in V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip out V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            ];
+
+            var options = {
+                $AutoPlay: true,
+                $AutoPlayInterval: 1500,
+                $PauseOnHover: 1,
+                $DragOrientation: 3,
+                $ArrowKeyNavigation: true,
+                $SlideDuration: 800,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: _SlideshowTransitions,
+                    $TransitionsOrder: 1,
+                    $ShowLink: true
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,
+                    $ChanceToShow: 1
+                },
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $ChanceToShow: 2,
+                    $ActionMode: 1,
+                    $SpacingX: 8,
+                    $DisplayPieces: 10,
+                    $ParkingPosition: 360
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.max(Math.min(parentWidth, 1110), 300));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 10px; left: 0px; width: 1800px;
+        height: 1000px; background: #191919; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(~/Content/img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1800px; height: 900px; overflow: hidden;">
+            <div>
+                <img u="image" src="~/Content/img/alila/1.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/2.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-02.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/3.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-03.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/4.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-04.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/5.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-05.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/6.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-06.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/7.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-07.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/8.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-08.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/9.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-09.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/10.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-10.jpg" />
+            </div>
+
+            <div>
+                <img u="image" src="~/Content/img/alila/11.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-11.jpg" />
+            </div>
+            <div>
+                <img u="image" src="~/Content/img/alila/12.jpg" />
+                <img u="thumb" src="~/Content/img/alila/thumb-12.jpg" />
+            </div>
+        </div>
+
+        <!-- Arrow Navigator Skin Begin -->
+        <style>
+            .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
+                position: absolute;
+                cursor: pointer;
+                display: block;
+                background: url(img/a17.png) no-repeat;
+                overflow: hidden;
+            }
+
+            .jssora05l {
+                background-position: -10px -40px;
+            }
+
+            .jssora05r {
+                background-position: -70px -40px;
+            }
+
+            .jssora05l:hover {
+                background-position: -130px -40px;
+            }
+
+            .jssora05r:hover {
+                background-position: -190px -40px;
+            }
+
+            .jssora05ldn {
+                background-position: -250px -40px;
+            }
+
+            .jssora05rdn {
+                background-position: -310px -40px;
+            }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 158px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 158px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        <!-- Thumbnail Navigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort01" style="position: absolute; width: 1800px; height: 100px; left:0px; bottom: 0px;">
+            <!-- Thumbnail Item Skin Begin -->
+            <style>
+                /* jssor slider thumbnail navigator skin 01 css */
+                /*
+                .jssort01 .p           (normal)
+                .jssort01 .p:hover     (normal mouseover)
+                .jssort01 .pav           (active)
+                .jssort01 .pav:hover     (active mouseover)
+                .jssort01 .pdn           (mousedown)
+                */
+                .jssort01 .w {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .jssort01 .c {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 68px;
+                    height: 68px;
+                    border: #000 2px solid;
+                }
+
+                .jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
+                    background: url(..~/Content/img/t01.png) center center;
+                    border-width: 0px;
+                    top: 2px;
+                    left: 2px;
+                    width: 68px;
+                    height: 68px;
+                }
+
+                .jssort01 .p:hover .c, .jssort01 .pav:hover .c {
+                    top: 0px;
+                    left: 0px;
+                    width: 70px;
+                    height: 70px;
+                    border: #fff 1px solid;
+                }
+            </style>
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" class="p" style="position: absolute; width: 103px; height: 72px; top: 0; left: 0;">
+                    <div class=w><div u="thumbnailtemplate" style=" width 100%; height 100%; border none;position:absolute; top 0; left 0;"></div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Thumbnail Item Skin End -->
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <!-- Thumbnail Navigator Skin End -->
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <!-- Jssor Slider End -->
+</body>
+</html>

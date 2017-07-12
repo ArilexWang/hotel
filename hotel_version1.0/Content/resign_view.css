@@ -1,9 +1,12 @@
-body{
+body.body1{
 	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-	background: #fff url(background.jpg) repeat top left;
+	background: #fff url(/Content/img/background.jpg) no-repeat;
+    background-size:cover;
 	font-weight: 400;
 	font-size: 15px;
 	color: #1d3c41;
+    width: 100%;
+    height: 100%;
 	overflow-y: scroll;
 }
 
@@ -43,7 +46,7 @@ a.hiddenanchor{
 
 #wrapper h1{
 	font-size: 36px;
-	color: rgb(6, 106, 117);
+	color: rgb(203, 244, 247);
 	padding: 2px 0 10px 0;
 	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
 	font-weight: bold;
@@ -67,11 +70,11 @@ a.hiddenanchor{
 }
 
 #wrapper label{
-	color: rgb(64, 92, 96);
+	color: rgb(203, 244, 247);
 	position: relative;
 }
 #wrapper redLabel{
-	color: rgb(255,0,0);
+	color: rgb(203, 244, 247);
 	position: relative;
 }
 #wrapper input{
@@ -136,7 +139,7 @@ a.hiddenanchor{
 
 
 p.login.button{
-	text-align: right;
+	text-align: center;
 	margin: 5px 0;
 }
 
@@ -148,7 +151,7 @@ p.login.button{
 	width: 88%;	
 	padding: 18px 6% 60px 6%;
 	margin: 0 0 35px 0;
-	background: rgb(247, 247, 247);
+	background-color: rgba(0,0,0,0.5);
 	border: 1px solid rgba(147, 184, 189,0.8);
 	-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
 	   -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
