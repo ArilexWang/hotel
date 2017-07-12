@@ -1,0 +1,221 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>room</title>
+    <style>
+        td {
+            text-align: center;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .td {
+            text-align: center;
+            width: 73.49px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 22px;
+        }
+
+        .td1 {
+            text-align: center;
+            width: 101.4px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 22px;
+        }
+
+        .bn {
+            width: 73.49px;
+            height: 49.17px;
+            border: 1px solid #979797;
+            color: #777777;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .bn1 {
+            width: 118.6px;
+            height: 48.94px;
+            border: 1px solid #979797;
+            color: #777777;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .bn2 {
+            width: 251.54px;
+            height: 48.16px;
+            border: 1px solid #979797;
+            color: #777777;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<table style="position:absolute;top:107px;left:490px">
+    <tr>
+
+        <td>
+            @using (Html.BeginForm("Index", "HOTEL_ROOM", FormMethod.Post))
+            {
+                <p>
+                    HOTEL_ID: @Html.DropDownList("date")
+                    HOTEL_ID: @Html.DropDownList("str")
+                    <input type="submit" value="Filter" />
+                </p>
+            }
+        </td>
+
+    </tr>
+</table>
+
+
+<body>
+
+    <form id="myForm" action="@Url.Action("Lu", "HOTEL_ROOM")" method="post">
+        <table id="floor_to_2" width="73" height="46" style="position:absolute;top:194px;left:394px">
+            <tr><td> <span>2层</span></td> </tr>
+            <tr><td> <span>单人间</span></td> </tr>
+        </table>
+
+        <table id="floor2" width="824" height="125" style="position:absolute;top:166px;left:490px;background:#e0f1f4;border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+            <tr>
+
+                <td class="td"> <input type="submit" value="201" id="201" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="202" id="202" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="203" id="203" name="myButton" class="bn"> </td>
+                <td colspan="3" class="td">  <img src="~/Content/img/lift.png" width="226" height="53"> </td>
+                <td class="td"> <input type="submit" value="204" id="204" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="205" id="205" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="206" id="206" name="myButton" class="bn"> </td>
+            </tr>
+            <tr>
+                <td class="td"> <input type="submit" value="207" id="207" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="208" id="208" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="209" id="209" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="210" id="210" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="211" id="211" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="212" id="212" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="213" id="213" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="214" id="214" name="myButton" class="bn"> </td>
+                <td class="td"> <input type="submit" value="215" id="215" name="myButton" class="bn"> </td>
+            </tr>
+        </table>
+        <table id="floor_to_3" width="73" height="46" style="position:absolute;top:334px;left:394px">
+            <tr><td> <span>3层</span></td> </tr>
+            <tr><td> <span>大床房</span></td> </tr>
+        </table>
+        <table id="floor3" width="824" height="125" style="position:absolute;top:309px;left:490px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+            <tr>
+                <td class="td1"> <input type="submit" value="301" id="301" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="302" id="302" name="myButton" class="bn1"> </td>
+                <td colspan="2" class="td"> <img src="~/Content/img/lift.png" width="226" height="53"> </td>
+                <td class="td1"> <input type="submit" value="303" id="303" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="304" id="304" name="myButton" class="bn1"> </td>
+            </tr>
+            <tr>
+                <td class="td1"> <input type="submit" value="305" id="305" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="306" id="306" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="307" id="307" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="308" id="308" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="309" id="309" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="310" id="310" name="myButton" class="bn1"> </td>
+            </tr>
+        </table>
+        <table id="floor_to_4" width="73" height="46" style="position:absolute;top:474px;left:394px">
+            <tr><td> <span>4层</span></td> </tr>
+            <tr><td> <span>标间</span></td> </tr>
+        </table>
+        <table id="floor4" width="824" height="125" style="position:absolute;top:453px;left:490px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+            <tr>
+                <td class="td1"> <input type="submit" value="401" id="401" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="402" id="402" name="myButton" class="bn1"> </td>
+                <td colspan="2" class="td"> <img src="~/Content/img/lift.png" width="226" height="53"> </td>
+                <td class="td1"> <input type="submit" value="403" id="403" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="404" id="404" name="myButton" class="bn1"> </td>
+            </tr>
+            <tr>
+                <td class="td1"> <input type="submit" value="405" id="405" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="406" id="406" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="407" id="407" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="408" id="408" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="409" id="409" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="410" id="410" name="myButton" class="bn1"> </td>
+            </tr>
+        </table>
+        <table id="floor_to_5" width="73" height="46" style="position:absolute;top:615px;left:394px">
+            <tr><td> <span>5层</span></td> </tr>
+            <tr><td> <span>标间</span></td> </tr>
+        </table>
+        <table id="floor5" width="824" height="125" style="position:absolute;top:594px;left:490px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+            <tr>
+                <td class="td1"> <input type="submit" value="501" id="501" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="502" id="502" name="myButton" class="bn1"> </td>
+                <td colspan="2" class="td"> <img src="~/Content/img/lift.png" width="226" height="53"> </td>
+                <td class="td1"> <input type="submit" value="503" id="503" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="504" id="504" name="myButton" class="bn1"> </td>
+            </tr>
+            <tr>
+                <td class="td1"> <input type="submit" value="505" id="505" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="506" id="506" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="507" id="507" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="508" id="508" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="509" id="509" name="myButton" class="bn1"> </td>
+                <td class="td1"> <input type="submit" value="510" id="510" name="myButton" class="bn1"> </td>
+            </tr>
+        </table>
+        <table id="floor_to_6" width="73" height="46" style="position:absolute;top:766px;left:394px">
+            <tr><td> <span>6层</span></td> </tr>
+            <tr><td> <span>套房</span></td> </tr>
+        </table>
+        <table id="floor6" width="824" height="125" style="position:absolute;top:743px;left:490px;background:#e0f1f4;border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+            <tr>
+                <td colspan="2" class="td1"> <input type="submit" value="601" id="601" name="myButton" class="bn2"> </td>
+                <td colspan="2" class="td1"> <img src="~/Content/img/lift.png" width="226" height="53"> </td>
+                <td colspan="2" class="td1"> <input type="submit" value="602" id="602" name="myButton" class="bn2"> </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td1"> <input type="submit" value="603" id="603" name="myButton" class="bn2"> </td>
+                <td colspan="2" class="td1"> <input type="submit" value="604" id="604" name="myButton" class="bn2"> </td>
+                <td colspan="2" class="td1"> <input type="submit" value="605" id="605" name="myButton" class="bn2"> </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <script type="text/javascript">
+
+        var state = '@ViewBag.requiredStr'
+    var roomN = [201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215,
+        301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
+        401, 402, 403, 404, 405, 406, 407, 408, 409, 410,
+        501, 502, 503, 504, 505, 506, 507, 508, 509, 510,
+        601, 602, 603, 604, 605];
+    for (var i = 0; i < state.length; i++) {
+        var color = "#80cde3";
+        if (state[i] == 2) {
+            color = "#face7d";
+        }
+        else if (state[i] == 3) {
+            color = "#f9c5c9";
+        }
+        document.getElementById(roomN[i].toString()).style.background = color;
+    }
+    </script>
+</body>
+
+<div width="824.62" height="125.34" style="position:absolute;top:900px;left:490px;">
+    <table width="824" height="125">
+        <tr></tr>
+        <tr></tr>
+    </table>
+</div>
+
+
+

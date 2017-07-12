@@ -46,10 +46,16 @@
                @class = (ViewBag.SelCat == "home" ? "Home_active" : "Home")
            }
                 )
-                <li class="Sub_cata">
-                    <a class="list" href="">房间信息</a>
-                </li>
-                
+               
+                @Html.RouteLink("房间信息", new
+           {
+               Controller = "HOTEL_ROOM",
+               Action = "Index"
+           }, new
+           {
+               @class = (ViewBag.SelCat == "room" ? "Sub_cate_active" : "Sub_cata")
+           }
+                )
                     @Html.RouteLink("客户信息", new
            {
                Controller = "HOTEL_CUSTOMER",

@@ -219,6 +219,7 @@
     <Compile Include="Controllers\HOTEL_CUSTOMERController.cs" />
     <Compile Include="Controllers\HOTEL_EMPLOYEEController.cs" />
     <Compile Include="Controllers\HOTEL_ORDERController.cs" />
+    <Compile Include="Controllers\HOTEL_ROOMController.cs" />
     <Compile Include="Controllers\HOTEL_USERController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\testController.cs" />
@@ -319,6 +320,7 @@
     <Content Include="Content\img\alila\thumb-11.jpg" />
     <Content Include="Content\img\alila\thumb-12.jpg" />
     <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\lift.png" />
     <Content Include="Content\img\loading.gif" />
     <Content Include="Content\Navigation.css" />
     <Content Include="Content\PagedList.css" />
@@ -442,6 +444,9 @@
     <Content Include="Views\HOTEL_CUSTOMER\Sort.cshtml" />
     <Content Include="Views\HOTEL_ORDER\Sort.cshtml" />
     <Content Include="Views\HOTEL_BILL\Sort.cshtml" />
+    <Content Include="Views\HOTEL_ROOM\Index.cshtml" />
+    <Content Include="Views\HOTEL_ROOM\Lu.cshtml" />
+    <Content Include="Views\HOTEL_ROOM\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
