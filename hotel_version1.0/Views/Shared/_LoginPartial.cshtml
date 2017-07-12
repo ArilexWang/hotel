@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Session["USER_ID"] != null)
+{
+    using (Html.BeginForm("Logout", "HOTEL_USER", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                
+                @Html.ActionLink("你好，" + Session["USER_ID"].ToString() + "!", "Index", "Home")
+
+            </li>
+
+            <li>
+                @Html.ActionLink("注销", "Logout", "HOTEL_USER")
+            </li>
+         
+        </ul>
+    }
+}
+else
+{
+    
+}

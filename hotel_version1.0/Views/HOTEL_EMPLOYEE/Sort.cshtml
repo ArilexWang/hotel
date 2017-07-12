@@ -1,0 +1,92 @@
+﻿@model IEnumerable<hotel_version1._0.HOTEL_EMPLOYEE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "HOTEL_EMPLOYEE", FormMethod.Post))
+{
+    <div class="searchBlock">
+        @Html.TextBox("searchString")
+        <input type="submit" value="搜索" style="border:none; background-color:white;" />
+    </div>
+}
+
+<table class="table-1">
+    <tr>
+        <th>
+
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_ID" }, FormMethod.Post))
+            {
+                <input type="submit" value="职工号" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "NAME" }, FormMethod.Post))
+            {
+                <input type="submit" value="职工姓名" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_TYPE" }, FormMethod.Post))
+            {
+                <input type="submit" value="职工部门" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "EMP_TEL" }, FormMethod.Post))
+            {
+                <input type="submit" value="电话号码" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "SALARY" }, FormMethod.Post))
+            {
+                <input type="submit" value="薪资" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_EMPLOYEE", new { message = "BONUS" }, FormMethod.Post))
+            {
+                <input type="submit" value="奖金" class="sortInput" />
+            }
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMP_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMP_TYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PHONENUMBER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOTEL_EMPLOYEE_TYPE.SALARY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BONUS)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.EMP_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EMP_ID })
+            </td>
+        </tr>
+    }
+
+</table>

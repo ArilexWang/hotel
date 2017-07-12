@@ -1,0 +1,92 @@
+﻿@model IEnumerable<hotel_version1._0.HOTEL_ORDER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "HOTEL_ORDER", FormMethod.Post))
+{
+
+    <div class="searchBlock">
+        @Html.TextBox("searchString")
+
+        <input type="submit" value="搜索" />
+
+    </div>
+}
+
+<table class="table-1">
+    <tr>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_ORDER", new { message = "ORDER_ID" }, FormMethod.Post))
+            {
+                <input type="submit" value="订单号" class="sortInput" />
+            }
+
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_ORDER", new { message = "NAME" }, FormMethod.Post))
+            {
+                <input type="submit" value="客户姓名" class="sortInput" />
+            }
+
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_ORDER", new { message = "ROOM_TYPE" }, FormMethod.Post))
+            {
+                <input type="submit" value="房间类型" class="sortInput" />
+            }
+
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_ORDER", new { message = "RESERVE_TIME" }, FormMethod.Post))
+            {
+                <input type="submit" value="预定时间" class="sortInput" />
+            }
+
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_ORDER", new { message = "ORDER_STATUS" }, FormMethod.Post))
+            {
+                <input type="submit" value="订单状态" class="sortInput" />
+            }
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOTEL_BILL.ORDER_ID)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.HOTEL_CUSTOMER.NAME)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.HOTEL_ROOM.ROOM_TYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RESERVE_TIME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STATUS)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new { id = item.ORDER_ID })
+
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<hotel_version1._0.HOTEL_USER>
+
+@{
+    ViewBag.Title = "Logout";
+}
+
+@{ Session["USER_ID"] = null;}
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/resign_view.css" />
+</head>
+<body>
+    <header>
+        <br /><br /><br /><br />
+    </header>
+    <section id="loginForm">
+        @using (Html.BeginForm("Index", "HOTEL_USER", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div id="wrapper">
+                <div id="login">
+                    <h1>缘宿全球连锁酒店登陆平台</h1>
+                    <p>
+                        @{
+                            var attrs1 = new Dictionary<string, object>();
+                            attrs1.Add("class", "uname");
+                            attrs1.Add("data-icon", "u");
+                        }
+                        @Html.Label("用户名", attrs1)
+                        @Html.TextBox("searchString1", null, new { @class = "form-control", placeholder = "USERID" })
+                    </p>
+                    <p>
+                        @{
+                            var attrs2 = new Dictionary<string, object>();
+                            attrs2.Add("class", "youpasswd");
+                            attrs2.Add("data-icon", "p");
+                        }
+                        @Html.Label("密码", attrs2)
+                        @Html.Password("searchString2", null, new { @class = "form-control", placeholder = "PASSWORD" })
+                        <br /><label>忘记口令请拨打电话021-65988888咨询</label>
+                    </p>
+                    <p class="login button">
+                        <input type="submit" value="Login" class="btn btn-default" />
+                    </p>
+                </div>
+            </div>
+                            }
+    </section>
+
+</body>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

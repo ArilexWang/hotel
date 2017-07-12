@@ -1,0 +1,66 @@
+﻿@model IEnumerable<hotel_version1._0.HOTEL_ORDER>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>消费明细</h2>
+
+<div>
+    
+    <table class="table-1" style="height:60px; width: 600px;">
+
+        <tr >
+            <th>
+                <strong>消费项目</strong>
+            </th>
+            <th>
+                <strong>消费金额</strong>
+            </th>
+            <th>
+                <strong>消费时间</strong>
+            </th>
+        </tr>
+
+            <tr >
+
+                <td>
+                    <h4>房费</h4>
+                </td>
+                <td>
+                   @Html.DisplayFor(model => model.First().HOTEL_BILL.ROOM_PRICE)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.First().CHECK_IN_TIME)
+
+
+                </td>
+            </tr>
+        <tr>
+
+            <td><h4>物品</h4></td>
+            <td>
+                @Html.DisplayFor( model => model.First().HOTEL_BILL.ITEM_PRICE)
+            </td>
+            <td>
+                <h4>未记录</h4>
+            </td>
+        </tr>
+        <tr>
+
+            <td><h4>服务</h4></td>
+            <td>
+                @Html.DisplayFor(model => model.First().HOTEL_BILL.SERVICE_PRICE)
+            </td>
+            <td>
+                
+                @Html.DisplayFor(model => model.First().HOTEL_ORDER_SERVICE.First().TIME)
+            </td>
+        </tr>
+
+    </table>
+    
+</div>
+<hr />
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model hotel_version1._0.HOTEL_ORDER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOTEL_ORDER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <strong>客户ID</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUS_ID)
+        </dd>
+        <dt>
+            <strong>客户姓名</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_CUSTOMER.NAME)
+        </dd>
+        
+        <dt>
+            <strong>入住时间</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_IN_TIME)
+        </dd>
+
+        <dt>
+            <strong>退房时间</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_OUT_TIME)
+        </dd>
+
+        <dt>
+            <strong>前订单号</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRE_ORDER_ID)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ORDER_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

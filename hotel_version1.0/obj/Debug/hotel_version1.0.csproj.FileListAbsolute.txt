@@ -1,0 +1,210 @@
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\ApplicationInsights.config
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\csc.exe
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\vbc.exe
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\hotel_version1.0.dll.config
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\hotel_version1.0.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\hotel_version1.0.pdb
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Antlr3.Runtime.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\EntityFramework.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\EntityFramework.SqlServer.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.Web.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Newtonsoft.Json.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Owin.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Helpers.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Mvc.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Optimization.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Razor.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.WebPages.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\WebGrease.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.Web.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Helpers.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Mvc.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Optimization.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.Razor.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.WebPages.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Antlr3.Runtime.pdb
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Newtonsoft.Json.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\EntityFramework.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\EntityFramework.SqlServer.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.dll
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.pdb
+C:\Users\Alex\documents\visual studio 2015\Projects\hotel_version1.0\hotel_version1.0\obj\Debug\hotel_version1.0.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\ApplicationInsights.config
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\csc.exe
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\vbc.exe
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\hotel_version1.0.dll.config
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\hotel_version1.0.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\hotel_version1.0.pdb
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Antlr3.Runtime.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\EntityFramework.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\EntityFramework.SqlServer.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.Web.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Newtonsoft.Json.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Owin.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\PagedList.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\PagedList.Mvc.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Helpers.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Mvc.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Optimization.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Razor.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.WebPages.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\WebGrease.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.Web.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\PagedList.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\PagedList.Mvc.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Helpers.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Mvc.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Optimization.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.Razor.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.WebPages.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Antlr3.Runtime.pdb
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Newtonsoft.Json.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\EntityFramework.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\EntityFramework.SqlServer.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\obj\Debug\hotel_version1.0.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\obj\Debug\hotel_version1.0.dll
+C:\Users\Alex\Downloads\hotel-version1\hotel_version1.0\obj\Debug\hotel_version1.0.pdb

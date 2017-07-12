@@ -1,0 +1,66 @@
+﻿
+@model IEnumerable< hotel_version1._0.HOTEL_ORDER>
+
+@{
+    ViewBag.Title = "Error!";
+}
+
+<h2>查询出错！</h2>
+<p>请检查输入是否为有效的顾客姓名！</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "BILL", FormMethod.Post))
+{
+    <div class="searchBlock">
+        顾客姓名: @Html.TextBox("searchString", null, new { @class = "input-xlarge", required = "required" })
+        <input type="submit" value="搜索" />
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            订单ID
+        </th>
+        <th>
+            消费金额
+        </th>
+
+        <th>
+            顾客姓名
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.HOTEL_BILL == null)
+        {
+            break;
+        }
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ORDER_ID)
+            </td>
+            <td>
+                @{
+                    var totalPrice = item.HOTEL_BILL.ROOM_PRICE + item.HOTEL_BILL.SERVICE_PRICE + item.HOTEL_BILL.ITEM_PRICE;
+                }
+                @totalPrice
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOTEL_CUSTOMER.NAME)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ORDER_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ORDER_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ORDER_ID })
+            </td>
+        </tr>
+                    }
+
+</table>
