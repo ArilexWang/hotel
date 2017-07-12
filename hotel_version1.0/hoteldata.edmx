@@ -52,9 +52,9 @@
         </EntityType>
         <EntityType Name="HOTEL_ITEM">
           <Key>
-            <PropertyRef Name="TYPE" />
+            <PropertyRef Name="ITEM_TYPE" />
           </Key>
-          <Property Name="TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
           <Property Name="PRICE" Type="number" Precision="38" Scale="0" />
         </EntityType>
         <EntityType Name="HOTEL_ITEM_USED">
@@ -193,7 +193,7 @@
           <End Role="HOTEL_ITEM_USED" Type="Self.HOTEL_ITEM_USED" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HOTEL_ITEM">
-              <PropertyRef Name="TYPE" />
+              <PropertyRef Name="ITEM_TYPE" />
             </Principal>
             <Dependent Role="HOTEL_ITEM_USED">
               <PropertyRef Name="ITEM_TYPE" />
@@ -368,10 +368,13 @@
         <EntityType Name="HOTEL_ITEM">
           <Key>
             <PropertyRef Name="TYPE" />
+            <PropertyRef Name="ITEM_TYPE" />
           </Key>
           <Property Name="TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PRICE" Type="Decimal" Precision="38" Scale="0" />
           <NavigationProperty Name="HOTEL_ITEM_USED" Relationship="Self.ITEM_TYPE_FK" FromRole="HOTEL_ITEM" ToRole="HOTEL_ITEM_USED" />
+          <Property Name="ITEM_TYPE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="HOTEL_ITEM_USED1" Relationship="Model.ITEM_TYPE_FK1" FromRole="HOTEL_ITEM" ToRole="HOTEL_ITEM_USED" />
         </EntityType>
         <EntityType Name="HOTEL_ITEM_USED">
           <Key>
@@ -383,6 +386,7 @@
           <Property Name="NUM" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
           <NavigationProperty Name="HOTEL_ITEM" Relationship="Self.ITEM_TYPE_FK" FromRole="HOTEL_ITEM_USED" ToRole="HOTEL_ITEM" />
           <NavigationProperty Name="HOTEL_ORDER" Relationship="Self.ORDER_ID_FK" FromRole="HOTEL_ITEM_USED" ToRole="HOTEL_ORDER" />
+          <NavigationProperty Name="HOTEL_ITEM1" Relationship="Model.ITEM_TYPE_FK1" FromRole="HOTEL_ITEM_USED" ToRole="HOTEL_ITEM" />
         </EntityType>
         <EntityType Name="HOTEL_OCCUPIED">
           <Key>
@@ -601,6 +605,10 @@
             <End Role="HOTEL_SERVICE" EntitySet="HOTEL_SERVICE" />
             <End Role="HOTEL_ORDER_SERVICE" EntitySet="HOTEL_ORDER_SERVICE" />
           </AssociationSet>
+          <AssociationSet Name="ITEM_TYPE_FK1" Association="Model.ITEM_TYPE_FK1">
+            <End Role="HOTEL_ITEM" EntitySet="HOTEL_ITEM" />
+            <End Role="HOTEL_ITEM_USED" EntitySet="HOTEL_ITEM_USED" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="HOTEL_ORDER_SERVICE">
           <Key>
@@ -638,6 +646,18 @@
             </Principal>
             <Dependent Role="HOTEL_ORDER_SERVICE">
               <PropertyRef Name="SERVICE_TYPE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ITEM_TYPE_FK1">
+          <End Type="Model.HOTEL_ITEM" Role="HOTEL_ITEM" Multiplicity="1" />
+          <End Type="Model.HOTEL_ITEM_USED" Role="HOTEL_ITEM_USED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOTEL_ITEM">
+              <PropertyRef Name="ITEM_TYPE" />
+            </Principal>
+            <Dependent Role="HOTEL_ITEM_USED">
+              <PropertyRef Name="ITEM_TYPE" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -700,7 +720,7 @@
           <EntitySetMapping Name="HOTEL_ITEM">
             <EntityTypeMapping TypeName="Model.HOTEL_ITEM">
               <MappingFragment StoreEntitySet="HOTEL_ITEM">
-                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
                 <ScalarProperty Name="PRICE" ColumnName="PRICE" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -54,7 +54,7 @@
     <EntitySetMapping Name="HOTEL_ITEM">
       <EntityTypeMapping TypeName="Model.HOTEL_ITEM">
         <MappingFragment StoreEntitySet="HOTEL_ITEM">
-          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
           <ScalarProperty Name="PRICE" ColumnName="PRICE" />
         </MappingFragment>
       </EntityTypeMapping>

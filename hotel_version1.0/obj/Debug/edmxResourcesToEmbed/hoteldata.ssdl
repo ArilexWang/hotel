@@ -47,9 +47,9 @@
   </EntityType>
   <EntityType Name="HOTEL_ITEM">
     <Key>
-      <PropertyRef Name="TYPE" />
+      <PropertyRef Name="ITEM_TYPE" />
     </Key>
-    <Property Name="TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="PRICE" Type="number" Precision="38" Scale="0" />
   </EntityType>
   <EntityType Name="HOTEL_ITEM_USED">
@@ -188,7 +188,7 @@
     <End Role="HOTEL_ITEM_USED" Type="Self.HOTEL_ITEM_USED" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HOTEL_ITEM">
-        <PropertyRef Name="TYPE" />
+        <PropertyRef Name="ITEM_TYPE" />
       </Principal>
       <Dependent Role="HOTEL_ITEM_USED">
         <PropertyRef Name="ITEM_TYPE" />

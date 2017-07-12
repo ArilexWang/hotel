@@ -6,7 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+/*using PagedList;*/
 using hotel_version1._0;
+
 
 namespace hotel_version1._0.Controllers
 {
@@ -35,11 +37,18 @@ namespace hotel_version1._0.Controllers
 
 
         // GET: HOTEL_CUSTOMER
-        public ActionResult Index()
-        {
-            ViewBag.SelCat = "customer";
-            return View(db.HOTEL_CUSTOMER.ToList());
-        }
+        //public ActionResult Index(int? page)
+        //{
+        //    int pagenumber = page ?? 1;
+        //    int pageSize = int.Parse(System.Configuration.ConfigurationManager.AppSettings["pageSize"]);
+        //    var cus = from c in db.HOTEL_CUSTOMER select c;
+        //    cus = cus.OrderBy(x => x.CUS_ID);
+        //    IPagedList<HOTEL_CUSTOMER> cust = cus.ToPagedList(pagenumber, pageSize);
+
+        //    ViewBag.SelCat = "customer";
+        //    //return View(db.HOTEL_CUSTOMER.ToList());
+        //    return View(cust);
+        //}
 
         [HttpPost]
         public ActionResult Index(String searchString)

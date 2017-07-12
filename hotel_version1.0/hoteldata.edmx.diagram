@@ -28,6 +28,7 @@
         <EntityTypeShape EntityType="Model.HOTEL_ORDER_SERVICE" Width="1.5" PointX="6.125" PointY="2.75" />
         <AssociationConnector Association="Model.HOTEL_ROOM_SERVICE_FK1" />
         <AssociationConnector Association="Model.HOTEL_ORDER_SERVICE_FK1" />
+        <AssociationConnector Association="Model.ITEM_TYPE_FK1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
