@@ -8,12 +8,31 @@
 <h2>客户消费细则</h2>
 
 <div>
-    <hr />
-    <dl class="dl-horizontal">
-        
+    
+    <table class="table-1">
+        <tr>
+            <th>
+                订单号
+            </th>
+            <th>
+                入住时间
+            </th>
+        </tr>
+
         @foreach (var item in Model)
         {
-            <dt>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ORDER_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CHECK_IN_TIME)
+                </td>
+            </tr>
+
+
+
+            @*<dt>
                 订单号
             </dt>
             <dd>
@@ -26,9 +45,9 @@
             <dd>
                 @Html.DisplayFor(modelItem => item.CHECK_IN_TIME)
             </dd>
-            <dt></dt>
+            <dt></dt>*@
         }
-        </dl>
+        </table>
 </div>
 <p class="body-2">
     @Html.ActionLink("Back to List", "Index")

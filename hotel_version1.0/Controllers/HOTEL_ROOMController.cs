@@ -14,6 +14,7 @@ namespace hotel_version1._0.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.SelCat = "room";
             var str = new List<string>();
             var date = new List<string>();
             var strQuery = from a in db.HOTEL_ROOM
