@@ -1,0 +1,74 @@
+﻿@model PagedList.IPagedList<hotel_version1._0.HOTEL_ORDER>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+<h2>消费记录</h2>
+<h4 style="margin-top: 5px">
+    @Html.ActionLink("SHOW ALL", "Index")
+</h4>
+
+@using (Html.BeginForm("Index", "HOTEL_BILL", FormMethod.Post))
+{
+    <div class="searchBlock">
+        <div class="search bar1">
+            @Html.TextBox("searchString") <!--, null, new { class = "input-xlarge", required = "required" }-->
+            <button type="submit"></button>
+            <!--<input type="submit" value="搜索" />-->
+        </div>
+    </div>
+}
+<table class="table-1">
+    <tr>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_BILL", new { message = "ORDER_ID" }, FormMethod.Post))
+            {
+                <input type="submit" value="订单号" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_BILL", new { message = "SUM" }, FormMethod.Post))
+            {
+                <input type="submit" value="消费总额" class="sortInput" />
+            }
+        </th>
+        <th>
+            @using (Html.BeginForm("Sort", "HOTEL_BILL", new { message = "NAME" }, FormMethod.Post))
+            {
+                <input type="submit" value="顾客姓名" class="sortInput" />
+            }
+        </th>
+        
+        <th>@Html.ActionLink("新建", "Create")</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.HOTEL_BILL == null)
+        {
+            break;
+        }
+
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ORDER_ID)
+            </td>
+            <td>
+                @{
+                    var totalPrice = item.HOTEL_BILL.ROOM_PRICE + item.HOTEL_BILL.SERVICE_PRICE + item.HOTEL_BILL.ITEM_PRICE;
+
+                }
+                @totalPrice
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOTEL_CUSTOMER.NAME)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ORDER_ID })
+            </td>
+        </tr>
+                    }
+</table>
+每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+@Html.PagedListPager(Model, page => Url.Action("Sort", new { page }))

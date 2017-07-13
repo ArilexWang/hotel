@@ -1,0 +1,101 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.bodyBox{
+    /*
+    position: absolute;
+    left: 247px;
+    top: 100px;
+    */
+}
+
+.roomSelectBox{
+	height:92px;
+	width:1092px;
+	background-color:#9AACBA;
+}
+#SearchText{
+	height:63px;
+	width:361px;
+	background:url(image/PriceSearchBox.gif);
+	position:relative;
+	left:700px;
+	top:10px;
+}
+
+.RoomSearched{
+	padding:0px;
+	margin:0px;
+	border:none;
+	position:relative;
+	left:32px;
+	top:-6px;
+	outline:none;
+	background:none;
+}
+
+.pTable{
+    width: 1092px;
+    border-collapse: collapse;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #9AACBA;
+}
+
+.pTable2{
+    width: 1092px;
+    border-collapse: collapse;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #9AACBA;
+}
+
+.pTable th, td{
+    padding: 5px 5px;
+    font-family: Verdana;
+    color: #708DAC;
+    height: 10px;
+    width: 100px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.pTable2 th, td{
+    padding: 5px 5px;
+    font-family: Verdana;
+    color: #708DAC;
+    height: 10px;
+    width: 100px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+.pTable tr:nth-child(even) {
+    background: #FFF;
+}
+
+.pTable tr:nth-child(odd) {
+    background: #D3DFED;
+}
+
+.pTable2 tr:nth-child(even) {
+    background: #D3DFED;
+}
+
+.pTable2 tr:nth-child(odd) {
+    background: #FFF;
+}
+
+.pTable2 tr:hover{
+    background: #d8f1f9;
+}
+
+.pTable tr:hover{
+    background: #d8f1f9;
+}
+
+#header,dates{
+    background: #FFF;
+    
+}
+

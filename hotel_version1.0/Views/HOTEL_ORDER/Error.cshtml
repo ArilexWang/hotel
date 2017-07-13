@@ -1,0 +1,29 @@
+﻿
+
+
+@model IEnumerable<hotel_version1._0.HOTEL_ORDER>
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2>订单信息</h2>
+<h4 style="margin-top: 5px">
+    @Html.ActionLink("SHOW ALL", "Index")
+</h4>
+
+
+
+@using (Html.BeginForm("Index", "HOTEL_ORDER", FormMethod.Post))
+{
+    <div class="searchBlock">
+        <div class="search bar1">
+            @Html.TextBox("searchString")
+            <button type="submit"></button>
+        </div>
+    </div>
+}
+
+<label class="body-2" style="display:inline"><strong>错误查询&nbsp;E&nbsp;R&nbsp;R&nbsp;O&nbsp;R&nbsp;!</strong></label>
+
+

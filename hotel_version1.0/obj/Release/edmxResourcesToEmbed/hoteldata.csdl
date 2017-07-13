@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HOTEL">
+    <Key>
+      <PropertyRef Name="HOTEL_ID" />
+    </Key>
+    <Property Name="HOTEL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="STREET" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NUMBERR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HOTEL_ROOM" Relationship="Self.HOTEL_ROOM_FK1" FromRole="HOTEL" ToRole="HOTEL_ROOM" />
+  </EntityType>
+  <EntityType Name="HOTEL_BILL">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SERVICE_PRICE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ROOM_PRICE" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="HOTEL_ORDER" Relationship="Self.ORDER_ID_FK1" FromRole="HOTEL_BILL" ToRole="HOTEL_ORDER" />
+    <Property Name="ITEM_PRICE" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HOTEL_CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUS_ID" />
+    </Key>
+    <Property Name="CUS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REPUTATION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TEL_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HOTEL_ORDER" Relationship="Self.CUSTOMER_ID_FK" FromRole="HOTEL_CUSTOMER" ToRole="HOTEL_ORDER" />
+  </EntityType>
+  <EntityType Name="HOTEL_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="String" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PHONENUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMP_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BONUS" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="HOTEL_EMPLOYEE_TYPE" Relationship="Self.EMP_TYPE_FK" FromRole="HOTEL_EMPLOYEE" ToRole="HOTEL_EMPLOYEE_TYPE" />
+  </EntityType>
+  <EntityType Name="HOTEL_EMPLOYEE_TYPE">
+    <Key>
+      <PropertyRef Name="EMP_TYPE" />
+    </Key>
+    <Property Name="EMP_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SALARY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TYPE_LEVEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HOTEL_EMPLOYEE" Relationship="Self.EMP_TYPE_FK" FromRole="HOTEL_EMPLOYEE_TYPE" ToRole="HOTEL_EMPLOYEE" />
+  </EntityType>
+  <EntityType Name="HOTEL_ITEM">
+    <Key>
+      <PropertyRef Name="TYPE" />
+    </Key>
+    <Property Name="TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRICE" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="HOTEL_ITEM_USED" Relationship="Self.ITEM_TYPE_FK" FromRole="HOTEL_ITEM" ToRole="HOTEL_ITEM_USED" />
+  </EntityType>
+  <EntityType Name="HOTEL_ITEM_USED">
+    <Key>
+      <PropertyRef Name="ITEM_TYPE" />
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ITEM_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ORDER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NUM" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="HOTEL_ITEM" Relationship="Self.ITEM_TYPE_FK" FromRole="HOTEL_ITEM_USED" ToRole="HOTEL_ITEM" />
+    <NavigationProperty Name="HOTEL_ORDER" Relationship="Self.ORDER_ID_FK" FromRole="HOTEL_ITEM_USED" ToRole="HOTEL_ORDER" />
+  </EntityType>
+  <EntityType Name="HOTEL_OCCUPIED">
+    <Key>
+      <PropertyRef Name="HOTEL_ID" />
+      <PropertyRef Name="PRE_DATE" />
+    </Key>
+    <Property Name="HOTEL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRE_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="ROOM_NUM" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="HOTEL_ROOM" Relationship="Self.ROOM_NUM_HOTEL_ID_FK1" FromRole="HOTEL_OCCUPIED" ToRole="HOTEL_ROOM" />
+  </EntityType>
+  <EntityType Name="HOTEL_ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CHECK_IN_TIME" Type="DateTime" />
+    <Property Name="CHECK_OUT_TIME" Type="DateTime" />
+    <Property Name="RESERVE_TIME" Type="DateTime" />
+    <Property Name="STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_ORDER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CUS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ROOM_NUM" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="HOTEL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="HOTEL_BILL" Relationship="Self.ORDER_ID_FK1" FromRole="HOTEL_ORDER" ToRole="HOTEL_BILL" />
+    <NavigationProperty Name="HOTEL_CUSTOMER" Relationship="Self.CUSTOMER_ID_FK" FromRole="HOTEL_ORDER" ToRole="HOTEL_CUSTOMER" />
+    <NavigationProperty Name="HOTEL_ITEM_USED" Relationship="Self.ORDER_ID_FK" FromRole="HOTEL_ORDER" ToRole="HOTEL_ITEM_USED" />
+    <NavigationProperty Name="HOTEL_ROOM" Relationship="Self.ROOM_NUM_FK" FromRole="HOTEL_ORDER" ToRole="HOTEL_ROOM" />
+    <NavigationProperty Name="HOTEL_ORDER_SERVICE" Relationship="Model.HOTEL_ROOM_SERVICE_FK1" FromRole="HOTEL_ORDER" ToRole="HOTEL_ORDER_SERVICE" />
+  </EntityType>
+  <EntityType Name="HOTEL_ROOM">
+    <Key>
+      <PropertyRef Name="ROOM_NUM" />
+      <PropertyRef Name="HOTEL_ID" />
+    </Key>
+    <Property Name="ROOM_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRICE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ROOM_NUM" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="HOTEL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="HOTEL" Relationship="Self.HOTEL_ROOM_FK1" FromRole="HOTEL_ROOM" ToRole="HOTEL" />
+    <NavigationProperty Name="HOTEL_OCCUPIED" Relationship="Self.ROOM_NUM_HOTEL_ID_FK1" FromRole="HOTEL_ROOM" ToRole="HOTEL_OCCUPIED" />
+    <NavigationProperty Name="HOTEL_ORDER" Relationship="Self.ROOM_NUM_FK" FromRole="HOTEL_ROOM" ToRole="HOTEL_ORDER" />
+  </EntityType>
+  <EntityType Name="HOTEL_SERVICE">
+    <Key>
+      <PropertyRef Name="SERVICE_TYPE" />
+    </Key>
+    <Property Name="SERVICE_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRICE" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="HOTEL_ORDER_SERVICE" Relationship="Model.HOTEL_ORDER_SERVICE_FK1" FromRole="HOTEL_SERVICE" ToRole="HOTEL_ORDER_SERVICE" />
+  </EntityType>
+  <EntityType Name="HOTEL_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="HOTEL_ROOM_FK1">
+    <End Role="HOTEL" Type="Self.HOTEL" Multiplicity="1" />
+    <End Role="HOTEL_ROOM" Type="Self.HOTEL_ROOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL">
+        <PropertyRef Name="HOTEL_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ROOM">
+        <PropertyRef Name="HOTEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORDER_ID_FK1">
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_BILL" Type="Self.HOTEL_BILL" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_BILL">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CUSTOMER_ID_FK">
+    <End Role="HOTEL_CUSTOMER" Type="Self.HOTEL_CUSTOMER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_CUSTOMER">
+        <PropertyRef Name="CUS_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER">
+        <PropertyRef Name="CUS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EMP_TYPE_FK">
+    <End Role="HOTEL_EMPLOYEE_TYPE" Type="Self.HOTEL_EMPLOYEE_TYPE" Multiplicity="1" />
+    <End Role="HOTEL_EMPLOYEE" Type="Self.HOTEL_EMPLOYEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_EMPLOYEE_TYPE">
+        <PropertyRef Name="EMP_TYPE" />
+      </Principal>
+      <Dependent Role="HOTEL_EMPLOYEE">
+        <PropertyRef Name="EMP_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ITEM_TYPE_FK">
+    <End Role="HOTEL_ITEM" Type="Self.HOTEL_ITEM" Multiplicity="1" />
+    <End Role="HOTEL_ITEM_USED" Type="Self.HOTEL_ITEM_USED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ITEM">
+        <PropertyRef Name="TYPE" />
+      </Principal>
+      <Dependent Role="HOTEL_ITEM_USED">
+        <PropertyRef Name="ITEM_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORDER_ID_FK">
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="1" />
+    <End Role="HOTEL_ITEM_USED" Type="Self.HOTEL_ITEM_USED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ITEM_USED">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ROOM_NUM_HOTEL_ID_FK1">
+    <End Role="HOTEL_ROOM" Type="Self.HOTEL_ROOM" Multiplicity="0..1" />
+    <End Role="HOTEL_OCCUPIED" Type="Self.HOTEL_OCCUPIED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ROOM">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_OCCUPIED">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ROOM_NUM_FK">
+    <End Role="HOTEL_ROOM" Type="Self.HOTEL_ROOM" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HOTEL_ORDER" Type="Self.HOTEL_ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ROOM">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER">
+        <PropertyRef Name="ROOM_NUM" />
+        <PropertyRef Name="HOTEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HOTELs" EntityType="Self.HOTEL" />
+    <EntitySet Name="HOTEL_BILL" EntityType="Self.HOTEL_BILL" />
+    <EntitySet Name="HOTEL_CUSTOMER" EntityType="Self.HOTEL_CUSTOMER" />
+    <EntitySet Name="HOTEL_EMPLOYEE" EntityType="Self.HOTEL_EMPLOYEE" />
+    <EntitySet Name="HOTEL_EMPLOYEE_TYPE" EntityType="Self.HOTEL_EMPLOYEE_TYPE" />
+    <EntitySet Name="HOTEL_ITEM" EntityType="Self.HOTEL_ITEM" />
+    <EntitySet Name="HOTEL_ITEM_USED" EntityType="Self.HOTEL_ITEM_USED" />
+    <EntitySet Name="HOTEL_OCCUPIED" EntityType="Self.HOTEL_OCCUPIED" />
+    <EntitySet Name="HOTEL_ORDER" EntityType="Self.HOTEL_ORDER" />
+    <EntitySet Name="HOTEL_ROOM" EntityType="Self.HOTEL_ROOM" />
+    <EntitySet Name="HOTEL_SERVICE" EntityType="Self.HOTEL_SERVICE" />
+    <EntitySet Name="HOTEL_USER" EntityType="Self.HOTEL_USER" />
+    <AssociationSet Name="HOTEL_ROOM_FK1" Association="Self.HOTEL_ROOM_FK1">
+      <End Role="HOTEL" EntitySet="HOTELs" />
+      <End Role="HOTEL_ROOM" EntitySet="HOTEL_ROOM" />
+    </AssociationSet>
+    <AssociationSet Name="ORDER_ID_FK1" Association="Self.ORDER_ID_FK1">
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+      <End Role="HOTEL_BILL" EntitySet="HOTEL_BILL" />
+    </AssociationSet>
+    <AssociationSet Name="CUSTOMER_ID_FK" Association="Self.CUSTOMER_ID_FK">
+      <End Role="HOTEL_CUSTOMER" EntitySet="HOTEL_CUSTOMER" />
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="EMP_TYPE_FK" Association="Self.EMP_TYPE_FK">
+      <End Role="HOTEL_EMPLOYEE_TYPE" EntitySet="HOTEL_EMPLOYEE_TYPE" />
+      <End Role="HOTEL_EMPLOYEE" EntitySet="HOTEL_EMPLOYEE" />
+    </AssociationSet>
+    <AssociationSet Name="ITEM_TYPE_FK" Association="Self.ITEM_TYPE_FK">
+      <End Role="HOTEL_ITEM" EntitySet="HOTEL_ITEM" />
+      <End Role="HOTEL_ITEM_USED" EntitySet="HOTEL_ITEM_USED" />
+    </AssociationSet>
+    <AssociationSet Name="ORDER_ID_FK" Association="Self.ORDER_ID_FK">
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+      <End Role="HOTEL_ITEM_USED" EntitySet="HOTEL_ITEM_USED" />
+    </AssociationSet>
+    <AssociationSet Name="ROOM_NUM_HOTEL_ID_FK1" Association="Self.ROOM_NUM_HOTEL_ID_FK1">
+      <End Role="HOTEL_ROOM" EntitySet="HOTEL_ROOM" />
+      <End Role="HOTEL_OCCUPIED" EntitySet="HOTEL_OCCUPIED" />
+    </AssociationSet>
+    <AssociationSet Name="ROOM_NUM_FK" Association="Self.ROOM_NUM_FK">
+      <End Role="HOTEL_ROOM" EntitySet="HOTEL_ROOM" />
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+    </AssociationSet>
+    <EntitySet Name="HOTEL_ORDER_SERVICE" EntityType="Model.HOTEL_ORDER_SERVICE" />
+    <AssociationSet Name="HOTEL_ROOM_SERVICE_FK1" Association="Model.HOTEL_ROOM_SERVICE_FK1">
+      <End Role="HOTEL_ORDER" EntitySet="HOTEL_ORDER" />
+      <End Role="HOTEL_ORDER_SERVICE" EntitySet="HOTEL_ORDER_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="HOTEL_ORDER_SERVICE_FK1" Association="Model.HOTEL_ORDER_SERVICE_FK1">
+      <End Role="HOTEL_SERVICE" EntitySet="HOTEL_SERVICE" />
+      <End Role="HOTEL_ORDER_SERVICE" EntitySet="HOTEL_ORDER_SERVICE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HOTEL_ORDER_SERVICE">
+    <Key>
+      <PropertyRef Name="SERVICE_TYPE" />
+      <PropertyRef Name="TIME" />
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="SERVICE_TYPE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TIME" Type="DateTime" Nullable="false" />
+    <Property Name="EMP_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ORDER_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HOTEL_ORDER" Relationship="Model.HOTEL_ROOM_SERVICE_FK1" FromRole="HOTEL_ORDER_SERVICE" ToRole="HOTEL_ORDER" />
+    <NavigationProperty Name="HOTEL_SERVICE" Relationship="Model.HOTEL_ORDER_SERVICE_FK1" FromRole="HOTEL_ORDER_SERVICE" ToRole="HOTEL_SERVICE" />
+  </EntityType>
+  <Association Name="HOTEL_ROOM_SERVICE_FK1">
+    <End Type="Model.HOTEL_ORDER" Role="HOTEL_ORDER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.HOTEL_ORDER_SERVICE" Role="HOTEL_ORDER_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_ORDER">
+        <PropertyRef Name="ORDER_ID" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER_SERVICE">
+        <PropertyRef Name="ORDER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HOTEL_ORDER_SERVICE_FK1">
+    <End Type="Model.HOTEL_SERVICE" Role="HOTEL_SERVICE" Multiplicity="1" />
+    <End Type="Model.HOTEL_ORDER_SERVICE" Role="HOTEL_ORDER_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL_SERVICE">
+        <PropertyRef Name="SERVICE_TYPE" />
+      </Principal>
+      <Dependent Role="HOTEL_ORDER_SERVICE">
+        <PropertyRef Name="SERVICE_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

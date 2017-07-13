@@ -1,0 +1,67 @@
+﻿@model hotel_version1._0.HOTEL_CUSTOMER
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<h4 class="body-2">客户信息修改</h4>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.CUS_ID)
+
+        
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px;
+      font-size:16px">客户身份证号</label> 
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CUS_ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CUS_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px;
+      font-size:16px">客户姓名</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NAME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NAME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px;
+      font-size:16px">信用等级</label> 
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.REPUTATION, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.REPUTATION, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px;
+      font-size:16px">客户电话</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TEL_NUMBER, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TEL_NUMBER, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<hr />
+<div class="body-2">
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,92 @@
+﻿@model hotel_version1._0.HOTEL_ORDER
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3 class="body-2">Are you sure you want to delete this information?</h3>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            入住时间
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_IN_TIME)
+        </dd>
+
+        <dt>
+               退房时间
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_OUT_TIME)
+        </dd>
+
+        <dt>
+            预定时间
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RESERVE_TIME)
+        </dd>
+
+        <dt>
+
+            订单状态
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            前订单号
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRE_ORDER_ID)
+        </dd>
+
+        <dt>
+            订单号
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_BILL.ORDER_ID)
+        </dd>
+
+        <dt>
+            客户信息
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_CUSTOMER.NAME)
+        </dd>
+
+        <dt>
+            房间类型
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL_ROOM.ROOM_TYPE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color" style="margin-left:90px">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    }
+    <hr />
+    <div class="body-2">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</div>

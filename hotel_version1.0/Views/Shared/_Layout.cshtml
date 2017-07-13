@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Hotel", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="Navigation">
+            <button type="button" class="collapseBtn">
+                <div class="arrow">
+                    <hr class="arrow_hand">
+                    <hr class="arrow_hand">
+                </div>
+            </button>
+
+            <ul class="messageBox">
+                @Html.RouteLink("主页", new
+           {
+               Controller = "HOME",
+               Action = "Index"
+           }, new
+           {
+               @class = (ViewBag.SelCat == "home" ? "Home_active" : "Home")
+           }
+                )
+               
+                @Html.RouteLink("房间信息", new{Controller = "HOTEL_ROOM",Action = "Index"}, new
+                {
+                    @class = (ViewBag.SelCat == "room" ? "Sub_cate_active" : "Sub_cata")
+                 })
+                @Html.RouteLink("房间价目表", new { Controller = "HOTEL_ROOM", Action = "Price" }, new
+                {
+                     @class = (ViewBag.SelCat == "roomType" ? "Sub_cata2_active" : "Sub_cata2")
+                 })
+
+                    @Html.RouteLink("客户信息", new
+           {
+               Controller = "HOTEL_CUSTOMER",
+               Action = "Index"
+           }, new
+           {
+               @class = (ViewBag.SelCat == "customer" ? "Sub_cate_active" : "Sub_cata")
+           }
+                )
+                
+                @Html.RouteLink("员工信息", new
+           {
+               Controller = "HOTEL_EMPLOYEE",
+               Action = "Index"
+           }, new
+           {
+               @class = (ViewBag.SelCat == "employee" ? "Sub_cate_active" : "Sub_cata")
+           }
+                )
+                @Html.RouteLink("订单信息", new
+           {
+               Controller = "HOTEL_ORDER",
+               Action = "Index"
+           }, new
+           {
+               @class = (ViewBag.SelCat == "order" ? "Sub_cate_active" : "Sub_cata")
+           }
+                )
+               
+                    @Html.RouteLink("财务信息", new
+               {
+                   Controller = "HOTEL_BILL",
+                   Action = "Index"
+               },new
+               {
+                   @class = (ViewBag.SelCat == "bill" ? "Sub_cate_active": "Sub_cata")
+               }
+                )
+               
+            </ul>
+        </div>
+
+        <div class="contentBox">
+            @RenderBody()
+        </div>
+
+     
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

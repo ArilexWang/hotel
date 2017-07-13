@@ -1,0 +1,33 @@
+﻿
+@model hotel_version1._0.HOTEL_ROOM
+
+@{
+    ViewBag.Title = "修改价格"; string ty = ViewBag.type;
+
+}
+
+<h2>修改价格</h2>
+
+<table class="table-1">
+    <tr>
+        <td>
+            @ViewBag.type
+
+        </td>
+    </tr>
+
+</table>
+@using (Html.BeginForm("submit", "HOTEL_ROOM", new { message = ViewBag.type }, FormMethod.Post))
+{
+    @Html.TextBox("price");
+    <input type="submit" value="修改" name="submit" class="editPriceBtn" />
+
+}
+
+<div>
+    @Html.ActionLink("返回列表", "Price")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~ndles/jqueryval")
+}

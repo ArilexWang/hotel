@@ -1,0 +1,49 @@
+﻿@model IEnumerable<hotel_version1._0.HOTEL_ROOM>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "房间价格";
+    List<string> a = (List<string>)ViewBag.room;
+    int b = a.Count();
+}
+
+<h2>房间价格</h2>
+
+<div class="bodyBox">
+
+    <div class="roomSelectBox">
+
+    </div>
+    <div class="roomStateDiv" id="roomSelectTable">
+        <table rules=rows class="table-1">
+            <tr >
+                <th>房型</th>
+                <th>价格</th>
+            </tr>
+            @for (int i = 0; i < b; i++)
+            {
+                <tr>
+                    <td>
+                        @ViewBag.room[i]
+                    </td>
+
+                    <td>
+                        @ViewBag.price[i]
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("修改价格", "priceEdit", new { id = ViewBag.room[i] })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+
+
+
+

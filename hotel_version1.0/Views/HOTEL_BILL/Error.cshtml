@@ -1,0 +1,25 @@
+﻿
+@model IEnumerable< hotel_version1._0.HOTEL_ORDER>
+
+@{
+    ViewBag.Title = "Error!";
+}
+<h2>消费记录</h2>
+<h4 style="margin-top: 5px">
+    @Html.ActionLink("SHOW ALL", "Index")
+</h4>
+
+
+
+@using (Html.BeginForm("Index", "BILL", FormMethod.Post))
+{
+    <div class="searchBlock">
+        <div class="search bar1">
+            @Html.TextBox("searchString") <!--, null, new { class = "input-xlarge", required = "required" }-->
+            <button type="submit"></button>
+            <!--<input type="submit" value="搜索" />-->
+        </div>
+    </div>
+}
+
+<label class="body-2" style="display:inline"><strong>错误查询&nbsp;E&nbsp;R&nbsp;R&nbsp;O&nbsp;R&nbsp;!</strong></label>

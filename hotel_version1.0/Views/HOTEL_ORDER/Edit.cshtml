@@ -1,0 +1,103 @@
+﻿@model hotel_version1._0.HOTEL_ORDER
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<h4 class="body-2">客户信息修改</h4>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ORDER_ID)
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">入住时间</label> 
+            <!--Html.LabelFor(model => model.CHECK_IN_TIME, htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CHECK_IN_TIME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CHECK_IN_TIME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">退房时间</label>
+            <!--Html.LabelFor(model => model.CHECK_OUT_TIME, htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CHECK_OUT_TIME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CHECK_OUT_TIME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">预定时间</label>
+            <!--Html.LabelFor(model => model.RESERVE_TIME, htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RESERVE_TIME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RESERVE_TIME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">订单状态</label>
+            <!--Html.LabelFor(model => model.STATUS, htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.STATUS, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.STATUS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">前订单号</label>
+
+            <!--Html.LabelFor(model => model.PRE_ORDER_ID, htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PRE_ORDER_ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PRE_ORDER_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">客户ID</label>
+            <!--Html.LabelFor(model => model.CUS_ID, "CUS_ID", htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.DropDownList("CUS_ID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CUS_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">房间号</label>
+            <!--Html.LabelFor(model => model.ROOM_NUM, "ROOM_NUM", htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.DropDownList("ROOM_NUM", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ROOM_NUM, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="font-family: Verdana;margin-top:-4px; font-size:16px">酒店ID</label>
+            <!--Html.LabelFor(model => model.HOTEL_ID, "HOTEL_ID", htmlAttributes: new { class = "control-label col-md-2" })-->
+            <div class="col-md-10">
+                @Html.DropDownList("HOTEL_ID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.HOTEL_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<hr />
+<div class="body-2">
+    @Html.ActionLink("Back to List", "Index")
+</div>
