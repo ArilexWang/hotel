@@ -3,6 +3,38 @@
     ViewBag.Title = "Index";
 }
 
+<style>
+    .parent1 {
+        width: 150px;
+        height: 30px;
+    }
+
+    .button_confirm1 {
+        height: 30px;
+        border: none;
+        color: #ffffff;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        border-radius: 30px;
+        background-color: #a8bfde;
+        position: absolute;
+        top: 470px;
+    }
+
+    .room_td {
+        width: 200px;
+    }
+
+    .room_order {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        border-collapse: unset;
+        position: absolute;
+        left: 500px;
+        top: 150px;
+        width: 400px;
+    }
+</style>
 
 <head>
     <meta charset="UTF-8">
@@ -54,39 +86,39 @@
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-size: 16px;
         }
+
         .button_confirm {
-            height:30px;
-            border:none;
+            height: 30px;
+            border: none;
             color: #ffffff;
-            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-            font-size:16px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 16px;
             border-radius: 30px;
             background-color: #a8bfde;
+            left: 00px;
         }
 
         .parent {
-            border: 1px solid #3498ca ;
-            background: #ffffff;
             width: 120px;
             height: 30px;
-            overflow: hidden;
-           
-
         }
 
+        .room_table {
+            border-collapse: unset;
+        }
     </style>
 </head>
 
-<table style="position:absolute;top:107px;left:490px">
+<table style="position:absolute;top:40px;left:490px" class="room_table">
     <tr>
 
         <td>
-            @using (Html.BeginForm("Index", "HOTEL_ROOM" ,FormMethod.Post))
+            @using (Html.BeginForm("Index", "HOTEL_ROOM", FormMethod.Post))
             {
                 <p>
-                    DATE: @Html.DropDownList("date",null ,new { @class = "parent" })
-                    HOTEL_ID: @Html.DropDownList("str", null,new { @class = "parent" })
-                    <input type="submit" value="Filter" class="button_confirm"/>
+                    酒店: @Html.DropDownList("str", null, new { @class = "parent" })
+                    日期: @Html.DropDownList("date", null, new { @class = "parent" })
+                    <input type="submit" value="确定" class="button_confirm" />
                 </p>
             }
         </td>
@@ -99,12 +131,12 @@
 
     @using (Html.BeginForm("Lu", "HOTEL_ROOM", new { hotelID = ViewBag.hotelID, dateTime = ViewBag.dateTime }, FormMethod.Post))
     {
-        <table id="floor_to_2" width="73" height="46" style="position:absolute;top:194px;left:394px">
+        <table id="floor_to_2" width="73" height="46" style="position:absolute;top:134px;left:260px" class="room_table">
             <tr><td> <span>2层</span></td> </tr>
             <tr><td> <span>单人间</span></td> </tr>
         </table>
 
-        <table id="floor2" width="824" height="125" style="position:absolute;top:166px;left:490px;background:#e0f1f4;border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+        <table id="floor2" width="824" class="room_table" height="125" style="position:absolute;top:106px;left:356px;background:#e0f1f4;border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
             <tr>
 
                 <td class="td"> <input type="submit" value="201" id="201" name="myButton" class="bn"> </td>
@@ -127,11 +159,11 @@
                 <td class="td"> <input type="submit" value="215" id="215" name="myButton" class="bn"> </td>
             </tr>
         </table>
-        <table id="floor_to_3" width="73" height="46" style="position:absolute;top:334px;left:394px">
+        <table id="floor_to_3" width="73" height="46" style="position:absolute;top:284px;left:260px;border:none;" class="room_table">
             <tr><td> <span>3层</span></td> </tr>
             <tr><td> <span>大床房</span></td> </tr>
         </table>
-        <table id="floor3" width="824" height="125" style="position:absolute;top:309px;left:490px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+        <table id="floor3" width="824" height="125" style="position:absolute;top:260px;left:356px;background:#e0f1f4; border: 1px solid #20BBFA " class="room_table">
             <tr>
                 <td class="td1"> <input type="submit" value="301" id="301" name="myButton" class="bn1"> </td>
                 <td class="td1"> <input type="submit" value="302" id="302" name="myButton" class="bn1"> </td>
@@ -148,11 +180,11 @@
                 <td class="td1"> <input type="submit" value="310" id="310" name="myButton" class="bn1"> </td>
             </tr>
         </table>
-        <table id="floor_to_4" width="73" height="46" style="position:absolute;top:474px;left:394px">
+        <table id="floor_to_4" width="73" height="46" style="position:absolute;top:434px;left:260px" class="room_table">
             <tr><td> <span>4层</span></td> </tr>
             <tr><td> <span>标间</span></td> </tr>
         </table>
-        <table id="floor4" width="824" height="125" style="position:absolute;top:453px;left:490px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+        <table id="floor4" class="room_table" width="824" height="125" style="position:absolute;top:413px;left:356px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
             <tr>
                 <td class="td1"> <input type="submit" value="401" id="401" name="myButton" class="bn1"> </td>
                 <td class="td1"> <input type="submit" value="402" id="402" name="myButton" class="bn1"> </td>
@@ -169,11 +201,11 @@
                 <td class="td1"> <input type="submit" value="410" id="410" name="myButton" class="bn1"> </td>
             </tr>
         </table>
-        <table id="floor_to_5" width="73" height="46" style="position:absolute;top:615px;left:394px">
+        <table id="floor_to_5" width="73" height="46" style="position:absolute;top:585px;left:260px" class="room_table">
             <tr><td> <span>5层</span></td> </tr>
             <tr><td> <span>标间</span></td> </tr>
         </table>
-        <table id="floor5" width="824" height="125" style="position:absolute;top:594px;left:490px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+        <table id="floor5" width="824" height="125" class="room_table" style="position:absolute;top:564px;left:356px;background:#e0f1f4; border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
             <tr>
                 <td class="td1"> <input type="submit" value="501" id="501" name="myButton" class="bn1"> </td>
                 <td class="td1"> <input type="submit" value="502" id="502" name="myButton" class="bn1"> </td>
@@ -190,11 +222,11 @@
                 <td class="td1"> <input type="submit" value="510" id="510" name="myButton" class="bn1"> </td>
             </tr>
         </table>
-        <table id="floor_to_6" width="73" height="46" style="position:absolute;top:766px;left:394px">
+        <table id="floor_to_6" width="73" height="46" style="position:absolute;top:746px;left:260px" class="room_table">
             <tr><td> <span>6层</span></td> </tr>
             <tr><td> <span>套房</span></td> </tr>
         </table>
-        <table id="floor6" width="824" height="125" style="position:absolute;top:743px;left:490px;background:#e0f1f4;border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
+        <table id="floor6" width="824" height="125" class="room_table" style="position:absolute;top:723px;left:356px;background:#e0f1f4;border: 1px solid #20BBFA " cellspacing="0" cellpadding="2">
             <tr>
                 <td colspan="2" class="td1"> <input type="submit" value="601" id="601" name="myButton" class="bn2"> </td>
                 <td colspan="2" class="td1"> <img src="~/Content/img/lift.png" width="226" height="53"> </td>

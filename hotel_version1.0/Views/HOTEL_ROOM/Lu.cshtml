@@ -1,4 +1,6 @@
 ﻿
+
+
 @{
     ViewBag.Title = "Lu";
 
@@ -8,7 +10,39 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>订单</h2>
+<style>
+    .parent1 {
+        width: 150px;
+        height: 30px;
+    }
+
+    .button_confirm1 {
+        height: 30px;
+        border: none;
+        color: #ffffff;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        border-radius: 30px;
+        background-color: #a8bfde;
+        position: absolute;
+        top: 470px;
+    }
+
+    .room_td {
+        width: 200px;
+    }
+
+    .room_order {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        border-collapse: unset;
+        position: absolute;
+        left: 500px;
+        top: 150px;
+        width: 400px;
+    }
+</style>
 
 @ViewBag.name
 
@@ -17,69 +51,129 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>ROOM_ORDER</h4>
         <hr />
+        <table class="room_order">
+            <tr>
+                <td class="room_td">
+                    订单号：
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.TextBox("orderID")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="room_td">
+                    姓名：
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.TextBox("name")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="room_td">
+                    电话：
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.TextBox("tel")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="room_td">
+                    入住时间:
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.TextBox("checkInTime")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="room_td">退房时间:</td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.DropDownList("checkOutList", null, new { @class = "parent1" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="room_td">
+                    酒店:
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.TextBox("hotelID")
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="room_td">
+                    房间号:
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.TextBox("roomNum")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="room_td">
+                    房间状态:
+                </td>
+                <td class="room_td">
+                    <div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.DropDownList("statusList", null, new { @class = "parent1" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
         <div>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                ORDER_ID：@Html.TextBox("orderID")
-            </div>
-        </div>
-
-        <div>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                Name：@Html.TextBox("name")
-            </div>
-        </div>
-
-        <div>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                Tel: @Html.TextBox("tel")
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                CheckInTime:@Html.TextBox("checkInTime")
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                CheckOutTime: @Html.DropDownList("checkOutList")
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                Status:@Html.DropDownList("statusList")
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-10">
-                ROOM_NUM:@Html.TextBox("roomNum")
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-10">
-                HOTEL_ID:@Html.TextBox("hotelID")
-            </div>
-        </div>
-
-        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="确定" class="button_confirm1" style="left:300px" />
             </div>
         </div>
+
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div style="position:absolute; top:570px;left:600px">
+    @Html.ActionLink("返回", "Index")
 </div>
+
 
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

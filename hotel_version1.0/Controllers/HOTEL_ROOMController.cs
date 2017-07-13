@@ -24,6 +24,8 @@ namespace hotel_version1._0.Controllers
             for (int i = 0; i < 7; i++)
                 date.Add(System.DateTime.Now.AddDays(i).ToShortDateString());
             str.AddRange(strQuery.Distinct());
+            str.Sort();
+            date.Sort();
 
             ViewBag.str = new SelectList(str);
             ViewBag.date = new SelectList(date);
@@ -36,6 +38,7 @@ namespace hotel_version1._0.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection fc)
         {
+            ViewBag.SelCat = "room";
             var hotel_id = Request.Form["str"];
             var selectDate = Request.Form["date"];
 
@@ -100,6 +103,15 @@ namespace hotel_version1._0.Controllers
                 date.Add(System.DateTime.Now.AddDays(i).ToShortDateString());
             str.AddRange(strQuery.Distinct());
 
+            str.Sort();
+            date.Sort();
+
+            str.Remove(hotel_id);
+            date.Remove(selectDate);
+            str.Insert(0, hotel_id);
+            date.Insert(0, selectDate);
+
+
             ViewBag.str = new SelectList(str);
             ViewBag.date = new SelectList(date);
             ViewBag.requiredStr = requiredStr;
@@ -149,7 +161,6 @@ namespace hotel_version1._0.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddUser(string id)
         {
-
             var checkInTime = Request.Form["checkInTime"];
             var checkOutTime = Request.Form["checkOutList"];
             var status = Request.Form["statusList"];
@@ -165,24 +176,21 @@ namespace hotel_version1._0.Controllers
             bool flag = false;
             if (DateTime.Compare(checkInDateTime, checkOutDateTime) > 0)
                 flag = true;
-
             var result = from a in db.HOTEL_OCCUPIED
                          where a.HOTEL_ID == hotelID && a.ROOM_NUM == roomNumDec
                          select new { a.PRE_DATE };
-
             foreach (var x in result)
             {
                 if (DateTime.Compare(x.PRE_DATE, checkInDateTime) >= 0 && DateTime.Compare(x.PRE_DATE, checkOutDateTime) <= 0)
                     flag = true;
             }
-
             if (flag == true)
             {
                 ViewBag.error = "时间错误或房间不可预定";
-                return View();
+                return RedirectToAction("Fail");
             }
 
-            var newOrder = new HOTEL_ORDER() { CUS_ID = cusID, ORDER_ID = orderID, CHECK_IN_TIME = checkInDateTime, CHECK_OUT_TIME = checkOutDateTime, RESERVE_TIME = System.DateTime.Now, STATUS = status, PRE_ORDER_ID = null, ROOM_NUM = 101, HOTEL_ID = "100001" };
+            var newOrder = new HOTEL_ORDER() { CUS_ID = cusID, ORDER_ID = orderID, CHECK_IN_TIME = checkInDateTime, CHECK_OUT_TIME = checkOutDateTime, RESERVE_TIME = System.DateTime.Now, STATUS = status, PRE_ORDER_ID = null, ROOM_NUM = roomNumDec, HOTEL_ID = hotelID };
             var newCustomer = new HOTEL_CUSTOMER() { CUS_ID = cusID, TEL_NUMBER = tel, REPUTATION = "normal", NAME = name };
 
             var ts = checkOutDateTime - checkInDateTime;
@@ -191,25 +199,30 @@ namespace hotel_version1._0.Controllers
                 var roomOccupied = new HOTEL_OCCUPIED() { HOTEL_ID = hotelID, ROOM_NUM = roomNumDec, PRE_DATE = checkInDateTime.AddDays(i) };
                 db.HOTEL_OCCUPIED.Add(roomOccupied);
             }
+            try
+            {
+                db.HOTEL_ORDER.Add(newOrder);
+                db.HOTEL_CUSTOMER.Add(newCustomer);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Fail");
+            }
+            return RedirectToAction("Succeed");
+        }
 
-            db.HOTEL_ORDER.Add(newOrder);
-            db.HOTEL_CUSTOMER.Add(newCustomer);
+        public ActionResult Succeed()
+        {
 
-            db.SaveChanges();
-
-            //catch(Exception )
-            //{
-            //    ViewBag.error = "失败";
-            //    return View();
-            //}
-            ViewBag.error = "成功";
             return View();
         }
 
+        public ActionResult Fail()
+        {
 
-
-
-
+            return View();
+        }
         private String generateCustomerID()
         {
             var days = DateTime.Now.AddYears(-1).DayOfYear.ToString();

@@ -55,6 +55,10 @@
                 {
                      @class = (ViewBag.SelCat == "roomType" ? "Sub_cata2_active" : "Sub_cata2")
                  })
+                @Html.RouteLink("预定信息", new { Controller = "HOTEL_ROOM", Action = "State" }, new
+           {
+               @class = (ViewBag.SelCat == "roomState" ? "Sub_cata2_active" : "Sub_cata2")
+           })
 
                     @Html.RouteLink("客户信息", new
            {
